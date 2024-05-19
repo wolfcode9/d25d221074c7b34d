@@ -1,0 +1,1827 @@
+[
+    {
+      "id": 95,
+      "name": "台灣頻道",
+      "name_en": "Taiwan",
+      "logo": "",
+      "channel": [
+        {
+          "id": 26,
+          "cid": "6",
+          "lid": 0,
+          "title": "民視",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2805,
+          "cid": "6",
+          "lid": 0,
+          "title": "民視",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 27,
+          "cid": "8",
+          "lid": 0,
+          "title": "台視",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 312,
+          "cid": "8",
+          "lid": 0,
+          "title": "台視",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1041,
+          "cid": "10",
+          "lid": 0,
+          "title": "中視",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2282,
+          "cid": "12",
+          "lid": 0,
+          "title": "華視",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 28,
+          "cid": "13",
+          "lid": 0,
+          "title": "公視",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2726,
+          "cid": "26",
+          "lid": 0,
+          "title": "緯來綜合",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 318,
+          "cid": "27",
+          "lid": 0,
+          "title": "八大第一",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2286,
+          "cid": "28",
+          "lid": 0,
+          "title": "八大綜合",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 35,
+          "cid": "29",
+          "lid": 0,
+          "title": "三立臺灣",
+          "logo": "",
+          "res": 3
+        },
+        {
+          "id": 21,
+          "cid": "29",
+          "lid": 0,
+          "title": "三立臺灣",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2436,
+          "cid": "29",
+          "lid": 0,
+          "title": "三立臺灣",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2435,
+          "cid": "30",
+          "lid": 0,
+          "title": "三立都會",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1001,
+          "cid": "30",
+          "lid": 0,
+          "title": "三立都會",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 38,
+          "cid": "30",
+          "lid": 0,
+          "title": "三立都會",
+          "logo": "",
+          "res": 3
+        },
+        {
+          "id": 342,
+          "cid": "31",
+          "lid": 0,
+          "title": "華藝綜合",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 372,
+          "cid": "32",
+          "lid": 0,
+          "title": "東森綜合",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 80,
+          "cid": "33",
+          "lid": 0,
+          "title": "東森超視",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 54,
+          "cid": "36",
+          "lid": 0,
+          "title": "中天綜合",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3072,
+          "cid": "36",
+          "lid": 0,
+          "title": "中天綜合",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 324,
+          "cid": "39",
+          "lid": 0,
+          "title": "中天娛樂",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 40,
+          "cid": "42",
+          "lid": 0,
+          "title": "TVBS歡樂",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 41,
+          "cid": "45",
+          "lid": 0,
+          "title": "JET綜合",
+          "logo": "",
+          "res": 3
+        },
+        {
+          "id": 2273,
+          "cid": "54",
+          "lid": 0,
+          "title": "TVBS",
+          "logo": "",
+          "res": 3
+        },
+        {
+          "id": 16,
+          "cid": "56",
+          "lid": 0,
+          "title": "TVBS",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 338,
+          "cid": "70",
+          "lid": 0,
+          "title": "緯來育樂",
+          "logo": "",
+          "res": 3
+        },
+        {
+          "id": 2772,
+          "cid": "70",
+          "lid": 0,
+          "title": "緯來育樂",
+          "logo": "",
+          "res": 3
+        },
+        {
+          "id": 337,
+          "cid": "77",
+          "lid": 0,
+          "title": "緯來日本",
+          "logo": "",
+          "res": 3
+        },
+        {
+          "id": 46,
+          "cid": "77",
+          "lid": 0,
+          "title": "緯來日本",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 105,
+          "cid": "118",
+          "lid": 0,
+          "title": "八大娛樂",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1340,
+          "cid": "121",
+          "lid": 0,
+          "title": "公視3台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2277,
+          "cid": "138",
+          "lid": 0,
+          "title": "中天亞洲",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 322,
+          "cid": "138",
+          "lid": 0,
+          "title": "中天亞洲",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 98,
+          "cid": "150",
+          "lid": 0,
+          "title": "民視綜藝",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 34,
+          "cid": "151",
+          "lid": 0,
+          "title": "民視第一台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 75,
+          "cid": "213",
+          "lid": 0,
+          "title": "豬哥亮歌廳秀",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 103,
+          "cid": "972",
+          "lid": 0,
+          "title": "豬哥會社",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 351,
+          "cid": "214",
+          "lid": 0,
+          "title": "ELTA娛樂台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 73,
+          "cid": "215",
+          "lid": 0,
+          "title": "韓國娛樂",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 345,
+          "cid": "265",
+          "lid": 0,
+          "title": "靖天國際",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1029,
+          "cid": "266",
+          "lid": 0,
+          "title": "靖天育樂",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 108,
+          "cid": "267",
+          "lid": 0,
+          "title": "靖天日本",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 51,
+          "cid": "268",
+          "lid": 0,
+          "title": "靖天歡樂",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 315,
+          "cid": "301",
+          "lid": 0,
+          "title": "三立綜合",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2815,
+          "cid": "301",
+          "lid": 0,
+          "title": "三立綜合",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 49,
+          "cid": "302",
+          "lid": 0,
+          "title": "靖天資訊",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 308,
+          "cid": "303",
+          "lid": 0,
+          "title": "靖天綜合",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 185,
+          "cid": "308",
+          "lid": 0,
+          "title": "中視經典",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 74,
+          "cid": "310",
+          "lid": 0,
+          "title": "中視菁采",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 66,
+          "cid": "311",
+          "lid": 0,
+          "title": "TVBS精采",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 117,
+          "cid": "311",
+          "lid": 0,
+          "title": "TVBS精采",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1359,
+          "cid": "314",
+          "lid": 0,
+          "title": "年代much",
+          "logo": "",
+          "res": 3
+        },
+        {
+          "id": 1137,
+          "cid": "2103",
+          "lid": 0,
+          "title": "ELTA綜合",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2288,
+          "cid": "493",
+          "lid": 0,
+          "title": "TVN台灣版",
+          "logo": "",
+          "res": 0
+        }, 
+        {
+          "id": 2773,
+          "cid": "985",
+          "lid": 0,
+          "title": "中視經典綜藝",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3,
+          "cid": "64",
+          "lid": 0,
+          "title": "東森亞洲",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 327,
+          "cid": "417",
+          "lid": 0,
+          "title": "TaiwanPlus",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 11,
+          "cid": "111",
+          "lid": 0,
+          "title": "大愛一臺",
+          "logo": "",
+          "res": 0
+        }
+      ]
+    },
+    {
+      "id": 163,
+      "name": "影視頻道",
+      "name_en": "Movie",
+      "logo": "",
+      "channel": [
+        {
+          "id": 382,
+          "cid": "197",
+          "lid": 0,
+          "title": "龍華日韓",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2825,
+          "cid": "40",
+          "lid": 0,
+          "title": "東森戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 321,
+          "cid": "40",
+          "lid": 0,
+          "title": "東森戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 81,
+          "cid": "41",
+          "lid": 0,
+          "title": "八大戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2727,
+          "cid": "43",
+          "lid": 0,
+          "title": "緯來戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 339,
+          "cid": "43",
+          "lid": 0,
+          "title": "緯來戲劇",
+          "logo": "",
+          "res": 3
+        },
+        {
+          "id": 350,
+          "cid": "62",
+          "lid": 0,
+          "title": "東森電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2720,
+          "cid": "62",
+          "lid": 0,
+          "title": "東森電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2728,
+          "cid": "63",
+          "lid": 0,
+          "title": "緯來電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 332,
+          "cid": "65",
+          "lid": 0,
+          "title": "HBO HD",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2823,
+          "cid": "65",
+          "lid": 0,
+          "title": "HBO HD",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1128,
+          "cid": "66",
+          "lid": 0,
+          "title": "東森洋片",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 37,
+          "cid": "68",
+          "lid": 0,
+          "title": "好萊塢電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 500,
+          "cid": "1",
+          "lid": 0,
+          "title": "愛爾達影劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 346,
+          "cid": "71",
+          "lid": 0,
+          "title": "CineMAX",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 349,
+          "cid": "80",
+          "lid": 0,
+          "title": "靖天映畫",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 319,
+          "cid": "81",
+          "lid": 0,
+          "title": "靖洋戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 191,
+          "cid": "87",
+          "lid": 0,
+          "title": "EYE戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 64,
+          "cid": "88",
+          "lid": 0,
+          "title": "三立戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 385,
+          "cid": "93",
+          "lid": 0,
+          "title": "龍華偶像",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1339,
+          "cid": "100",
+          "lid": 0,
+          "title": "霹靂臺灣",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 110,
+          "cid": "119",
+          "lid": 0,
+          "title": "靖天電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 375,
+          "cid": "125",
+          "lid": 0,
+          "title": "美亞電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1023,
+          "cid": "149",
+          "lid": 0,
+          "title": "民視影劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 84,
+          "cid": "163",
+          "lid": 0,
+          "title": "AMC",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 329,
+          "cid": "188",
+          "lid": 0,
+          "title": "HBOSignature",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2824,
+          "cid": "188",
+          "lid": 0,
+          "title": "HBOSignature",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 330,
+          "cid": "190",
+          "lid": 0,
+          "title": "HBO Hits",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 62,
+          "cid": "191",
+          "lid": 0,
+          "title": "采昌影劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2804,
+          "cid": "191",
+          "lid": 0,
+          "title": "采昌影劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 497,
+          "cid": "192",
+          "lid": 0,
+          "title": "影迷數位電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2800,
+          "cid": "192",
+          "lid": 0,
+          "title": "影迷數位電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 365,
+          "cid": "193",
+          "lid": 0,
+          "title": "龍華戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2796,
+          "cid": "193",
+          "lid": 0,
+          "title": "龍華戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 100,
+          "cid": "198",
+          "lid": 0,
+          "title": "龍華經典",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 373,
+          "cid": "199",
+          "lid": 0,
+          "title": "龍翔時代",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2289,
+          "cid": "203",
+          "lid": 0,
+          "title": "天映經典",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 69,
+          "cid": "224",
+          "lid": 0,
+          "title": "公視戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1066,
+          "cid": "2066",
+          "lid": 0,
+          "title": "AXN亞洲",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 18,
+          "cid": "444",
+          "lid": 0,
+          "title": "Trill恐怖電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 311,
+          "cid": "196",
+          "lid": 0,
+          "title": "龍華電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 83,
+          "cid": "202",
+          "lid": 0,
+          "title": "華納電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 109,
+          "cid": "225",
+          "lid": 0,
+          "title": "靖天戲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 362,
+          "cid": "227",
+          "lid": 0,
+          "title": "CATCHPLAY",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1048,
+          "cid": "533",
+          "lid": 0,
+          "title": "TVB亞洲劇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1345,
+          "cid": "405",
+          "lid": 0,
+          "title": "CHC高清電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1346,
+          "cid": "406",
+          "lid": 0,
+          "title": "CHC動作電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1347,
+          "cid": "407",
+          "lid": 0,
+          "title": "CHC家庭影院",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1348,
+          "cid": "408",
+          "lid": 0,
+          "title": "CBN歡笑劇場",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1349,
+          "cid": "410",
+          "lid": 0,
+          "title": "SETONE",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1350,
+          "cid": "411",
+          "lid": 0,
+          "title": "GEM",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1175,
+          "cid": "1226",
+          "lid": 0,
+          "title": "龍翔時代",
+          "logo": "",
+          "res": 0
+        }
+      ]
+    },
+    {
+      "id": 159,
+      "name": "體育頻道",
+      "name_en": "Sports",
+      "logo": "",
+      "channel": [
+        {
+          "id": 118,
+          "cid": "72",
+          "lid": 0,
+          "title": "緯來體育",
+          "logo": "",
+          "res": 3
+        },
+        {
+          "id": 2732,
+          "cid": "72",
+          "lid": 0,
+          "title": "緯來體育",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 71,
+          "cid": "241",
+          "lid": 0,
+          "title": "NBA(TW)",
+          "logo": "",
+          "res": 0
+        },
+        
+        {
+          "id": 2729,
+          "cid": "142",
+          "lid": 0,
+          "title": "ELTA體育1台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2730,
+          "cid": "143",
+          "lid": 0,
+          "title": "ELTA體育2台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 194,
+          "cid": "144",
+          "lid": 0,
+          "title": "ELTA體育3台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2731,
+          "cid": "144",
+          "lid": 0,
+          "title": "ELTA體育3台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2722,
+          "cid": "144",
+          "lid": 0,
+          "title": "ELTA體育3台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2820,
+          "cid": "145",
+          "lid": 0,
+          "title": "ELTA體育4台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1130,
+          "cid": "104",
+          "lid": 0,
+          "title": "Z頻道",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 381,
+          "cid": "237",
+          "lid": 0,
+          "title": "博斯無限",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2797,
+          "cid": "237",
+          "lid": 0,
+          "title": "博斯無限",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 426,
+          "cid": "238",
+          "lid": 0,
+          "title": "博斯無限2",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2798,
+          "cid": "238",
+          "lid": 0,
+          "title": "博斯無限2",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 498,
+          "cid": "236",
+          "lid": 0,
+          "title": "博斯網球",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 377,
+          "cid": "233",
+          "lid": 0,
+          "title": "博斯高球1",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 378,
+          "cid": "234",
+          "lid": 0,
+          "title": "博斯高球2",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 175,
+          "cid": "235",
+          "lid": 0,
+          "title": "博斯魅力",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 379,
+          "cid": "209",
+          "lid": 0,
+          "title": "博斯運動1",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 380,
+          "cid": "210",
+          "lid": 0,
+          "title": "博斯運動2",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1342,
+          "cid": "7031",
+          "lid": 0,
+          "title": "歐洲體育",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 464,
+          "cid": "402",
+          "lid": 0,
+          "title": "魅力足球",
+          "logo": "",
+          "res": 0
+        }        
+      ]
+    },
+    {
+      "id": 160,
+      "name": "紀實頻道",
+      "name_en": "Documentary",
+      "logo": "",
+      "channel": [
+        {
+          "id": 2299,
+          "cid": "278",
+          "lid": 0,
+          "title": "亞洲旅遊",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2817,
+          "cid": "19",
+          "lid": 0,
+          "title": "探索頻道",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1035,
+          "cid": "19",
+          "lid": 0,
+          "title": "探索頻道",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 102,
+          "cid": "941",
+          "lid": 0,
+          "title": "大陸尋奇",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2275,
+          "cid": "532",
+          "lid": 0,
+          "title": "TLC",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 367,
+          "cid": "21",
+          "lid": 0,
+          "title": "動物星球",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 113,
+          "cid": "103",
+          "lid": 0,
+          "title": "Fashion One",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 78,
+          "cid": "148",
+          "lid": 0,
+          "title": "民視旅遊",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 306,
+          "cid": "204",
+          "lid": 0,
+          "title": "探索亞洲",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 343,
+          "cid": "205",
+          "lid": 0,
+          "title": "探索科學",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 388,
+          "cid": "950",
+          "lid": 0,
+          "title": "Nat Geo WILD",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1038,
+          "cid": "251",
+          "lid": 0,
+          "title": "國家野生",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1159,
+          "cid": "255",
+          "lid": 0,
+          "title": "HGTV",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2303,
+          "cid": "255",
+          "lid": 0,
+          "title": "CI罪案偵查",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1036,
+          "cid": "256",
+          "lid": 0,
+          "title": "探索EVE",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 327,
+          "cid": "417",
+          "lid": 0,
+          "title": "TaiwanPlus",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 424,
+          "cid": "260",
+          "lid": 0,
+          "title": "BBC Lifestyle",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 91,
+          "cid": "261",
+          "lid": 0,
+          "title": "視納華仁紀實",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1360,
+          "cid": "275",
+          "lid": 0,
+          "title": "美食星球",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1494,
+          "cid": "412",
+          "lid": 0,
+          "title": "EYE旅遊",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 63,
+          "cid": "280",
+          "lid": 0,
+          "title": "Travel Channel",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 97,
+          "cid": "252",
+          "lid": 0,
+          "title": "BBC EARTH",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 335,
+          "cid": "435",
+          "lid": 0,
+          "title": "探索動力DMAX",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 368,
+          "cid": "262",
+          "lid": 0,
+          "title": "Pet Club",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 114,
+          "cid": "232",
+          "lid": 0,
+          "title": "Globetrotter 環遊旅行家",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 25,
+          "cid": "1250",
+          "lid": 0,
+          "title": "NASA TV",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 196,
+          "cid": "2960",
+          "lid": 0,
+          "title": "NASA Live",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 389,
+          "cid": "253",
+          "lid": 0,
+          "title": "TV5MONDE STYLE",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 291,
+          "cid": "983",
+          "lid": 0,
+          "title": "動物世界",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2287,
+          "cid": "492",
+          "lid": 0,
+          "title": "法國時裝",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2765,
+          "cid": "930",
+          "lid": 0,
+          "title": "台灣啟示錄",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1533,
+          "cid": "1048",
+          "lid": 0,
+          "title": "TLC",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 294,
+          "cid": "971",
+          "lid": 0,
+          "title": "National Geographic",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1262,
+          "cid": "1510",
+          "lid": 0,
+          "title": "TLC Canada",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1265,
+          "cid": "1512",
+          "lid": 0,
+          "title": "Food Network Canada",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1413,
+          "cid": "2023",
+          "lid": 0,
+          "title": "History",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 1421,
+          "cid": "2015",
+          "lid": 0,
+          "title": "Food Network",
+          "logo": "",
+          "res": 0
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "name": "私密頻道",
+      "name_en": "Private",
+      "logo": "",
+      "channel": [
+        {
+          "id": 402,
+          "cid": "9000",
+          "lid": 0,
+          "title": "松視1台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2905,
+          "cid": "4567",
+          "lid": 0,
+          "title": "松視1台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2906,
+          "cid": "4568",
+          "lid": 0,
+          "title": "松視2台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 403,
+          "cid": "9001",
+          "lid": 0,
+          "title": "松視2台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 404,
+          "cid": "9002",
+          "lid": 0,
+          "title": "松視3台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2907,
+          "cid": "4569",
+          "lid": 0,
+          "title": "松視3台",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3158,
+          "cid": "9182",
+          "lid": 0,
+          "title": "波多野結衣",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3154,
+          "cid": "9178",
+          "lid": 0,
+          "title": "蒼井空",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3162,
+          "cid": "9186",
+          "lid": 0,
+          "title": "上原亞衣",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 410,
+          "cid": "9004",
+          "lid": 0,
+          "title": "潘朵拉完美",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 413,
+          "cid": "9006",
+          "lid": 0,
+          "title": "彩虹電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2908,
+          "cid": "4570",
+          "lid": 0,
+          "title": "HAPPY",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2909,
+          "cid": "4571",
+          "lid": 0,
+          "title": "JStar",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 406,
+          "cid": "9007",
+          "lid": 0,
+          "title": "彩虹E",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2935,
+          "cid": "4597",
+          "lid": 0,
+          "title": "彩虹E",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2910,
+          "cid": "4572",
+          "lid": 0,
+          "title": "彩虹K",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 415,
+          "cid": "9010",
+          "lid": 0,
+          "title": "彩虹K",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2931,
+          "cid": "4593",
+          "lid": 0,
+          "title": "Amazing",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2934,
+          "cid": "4596",
+          "lid": 0,
+          "title": "彩虹電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3076,
+          "cid": "9101",
+          "lid": 0,
+          "title": "Brazzers TV",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3078,
+          "cid": "9103",
+          "lid": 0,
+          "title": "Vivid Touch",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3079,
+          "cid": "9104",
+          "lid": 0,
+          "title": "Erox",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3080,
+          "cid": "9105",
+          "lid": 0,
+          "title": "Red Hot",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3081,
+          "cid": "9106",
+          "lid": 0,
+          "title": "Exxxtasy",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3082,
+          "cid": "9107",
+          "lid": 0,
+          "title": "Penthouse Quickie",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3083,
+          "cid": "9108",
+          "lid": 0,
+          "title": "RED LIPS",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3084,
+          "cid": "9109",
+          "lid": 0,
+          "title": "VIXEN",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3092,
+          "cid": "9117",
+          "lid": 0,
+          "title": "BRAZZERS EN ESPANOL",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3093,
+          "cid": "9118",
+          "lid": 0,
+          "title": "BUSTY LOVER",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3094,
+          "cid": "9119",
+          "lid": 0,
+          "title": "CUM 4K",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3075,
+          "cid": "9100",
+          "lid": 0,
+          "title": "Red Light",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3077,
+          "cid": "9102",
+          "lid": 0,
+          "title": "Blue Hustler",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2932,
+          "cid": "4594",
+          "lid": 0,
+          "title": "潘朵拉完美",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2930,
+          "cid": "4592",
+          "lid": 0,
+          "title": "Banana香蕉",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2933,
+          "cid": "4595",
+          "lid": 0,
+          "title": "LOOK",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 458,
+          "cid": "9017",
+          "lid": 0,
+          "title": "Babes TV HD",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 451,
+          "cid": "9018",
+          "lid": 0,
+          "title": "Hustler HD",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 452,
+          "cid": "9020",
+          "lid": 0,
+          "title": "Redlight HD",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 459,
+          "cid": "9021",
+          "lid": 0,
+          "title": "SEX ATION HD",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 461,
+          "cid": "9024",
+          "lid": 0,
+          "title": "Passie",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 405,
+          "cid": "9008",
+          "lid": 0,
+          "title": "極限電影",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 411,
+          "cid": "9005",
+          "lid": 0,
+          "title": "PLAYBOY HD",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2915,
+          "cid": "4577",
+          "lid": 0,
+          "title": "奧視頻道",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 2916,
+          "cid": "4578",
+          "lid": 0,
+          "title": "奧視頻道2",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3099,
+          "cid": "9124",
+          "lid": 0,
+          "title": "EXXXTRA SMALL",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3095,
+          "cid": "9120",
+          "lid": 0,
+          "title": "DAUGHTER SWAP",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3096,
+          "cid": "9121",
+          "lid": 0,
+          "title": "DEEPER",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3097,
+          "cid": "9122",
+          "lid": 0,
+          "title": "DIGITAL PLAYGROUND",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3098,
+          "cid": "9123",
+          "lid": 0,
+          "title": "EROTIC SPICE",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3100,
+          "cid": "9125",
+          "lid": 0,
+          "title": "FAKE AGENT",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3101,
+          "cid": "9126",
+          "lid": 0,
+          "title": "FAKE AGENT UK",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3102,
+          "cid": "9127",
+          "lid": 0,
+          "title": "FAKE COP",
+          "logo": "",
+          "res": 0
+        },
+        {
+          "id": 3155,
+          "cid": "9179",
+          "lid": 0,
+          "title": "金絲雀",
+          "logo": "",
+          "res": 0
+        }
+      ]
+    }
+  ]
