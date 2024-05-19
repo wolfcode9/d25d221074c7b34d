@@ -12,7 +12,7 @@
   "sites": [
     {
       "key": "csp_Douban",
-      "name": "豆瓣 | 薦片",
+      "name": "薦片",
       "type": 3,
       "api": "csp_DouDou",
       "searchable": 0,
