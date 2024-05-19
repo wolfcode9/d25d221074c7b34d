@@ -1,12 +1,12 @@
 {
-  "spider": "./jar/gao_240518.jar",
-  "logo": "https://avatars.githubusercontent.com/u/86637213?v=4",
+  "spider": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/f432492d15484d04/e9565407be1d1959",
+  "logo": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/e1f705ab5e59c84a/74b60a8aaaca12e5",
   "wallpaper": "https://tuapi.eees.cc/api.php?category=fengjing&type=302",
   "lives": [
     {
       "name": "Live Channels",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "url": "./live.txt"
+      "url": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/d3ef48d76c053b24/6df8af2d858ae0c4"
     }
   ],
   "sites": [
@@ -16,30 +16,29 @@
       "type": 3,
       "api": "csp_DouDou",
       "searchable": 0,
-      "changeable": 1,
-      "ext": "./json/douban.json"
+      "changeable": 1
     },
     {
       "key": "py_Yingshi",
       "name": "影視",
       "type": 3,
-      "api": "./py/py_yingshi.py",
+      "api": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/77b87ab317c584e0/p465b51f5edca8910",
       "url": "https://www.yingshi.tv/",
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "ext": "./json/yingshi.json"
+      "ext": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/6ecdf5fca6d38571/3ad3f35041197352"
     },
     {
       "key": "py_Mubai",
       "name": "慕白",
       "type": 3,
-      "api": "./py/py_mubai.py",
+      "api": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/77b87ab317c584e0/p794a41ec368b5a96",
       "url": "https://m.mubai.link/",
       "searchable": 1,
       "changeable": 1,
       "filterable": 1,
-      "ext": "./json/mubai.json"
+      "ext": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/6ecdf5fca6d38571/434f7b30ffedd904"
     },
     {
       "key": "原創",
