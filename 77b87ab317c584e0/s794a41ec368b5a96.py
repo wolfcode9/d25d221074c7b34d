@@ -1,7 +1,6 @@
 #coding=utf-8
 #!/usr/bin/python
 import sys
-sys.path.append('..') 
 from s6ce0b3971a2f630d import Spider
 import requests
 import re
