@@ -19,15 +19,14 @@
       "changeable": 1
     },
     {
-      "key": "py_Yingshi",
+      "key": "csp_YingShi",
       "name": "影視",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/77b87ab317c584e0/s465b51f5edca8910.py",
-      "url": "https://www.yingshi.tv/",
-      "searchable": 1,
+      "api": "csp_YingShi",
+      "searchable": 1,            
       "changeable": 1,
-      "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/6ecdf5fca6d38571/3ad3f35041197352"
+      "url": "https://www.yingshi.tv/",
+	  "jar":"https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/f432492d15484d04/ade77876bb0a1eaf"
     },
     {
       "key": "py_Mubai",
