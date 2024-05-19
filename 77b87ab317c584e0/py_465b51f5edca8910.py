@@ -1,6 +1,7 @@
 #coding=utf-8
 #!/usr/bin/python
-from py_6ce0b3971a2f630d import Spider
+sys.path.append('..') 
+from base.spider import Spider
 import requests
 
 class Spider(Spider):
