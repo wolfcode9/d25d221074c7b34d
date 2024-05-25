@@ -11,10 +11,10 @@
   ],
   "sites": [
     {
-      "key": "csp_Douban",
-      "name": "薦片",
+      "key": "py_Douban",
+      "name": "豆瓣PY薦片",
       "type": 3,
-      "api": "csp_DouDou",
+      "api": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/77b87ab317c584e0/sedc4fd1608fa4fac.py",
       "searchable": 0,
       "changeable": 1
     },
