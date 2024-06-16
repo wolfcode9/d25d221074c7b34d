@@ -32,7 +32,7 @@ class Spider(Spider):
 	def categoryContent(self,tid,pg,filter,extend):	
 		result = {}		
 		start = (int(pg) - 1) * 20		
-		limit = 30
+		limit = 20
 		total = 1000
 		pagecount = int(total/limit)
 		result['list'] = self.fetch_vodData(self.douban_url(tid,limit,start))
