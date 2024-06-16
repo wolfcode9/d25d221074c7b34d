@@ -20,14 +20,14 @@ class Spider(Spider):
 		]
 		return {'class': classes}
 	
-	def homeVideoContent(self):		
-		limit = 20
+	def homeVideoContent(self):
+		limit = 10
 		#電視劇 https://movie.douban.com/j/search_subjects?type=tv&tag=热门&page_limit=50&page_start=0
 		#電影 https://movie.douban.com/j/search_subjects?type=movie&tag=热门&page_limit=50&page_start=0
 		with concurrent.futures.ThreadPoolExecutor() as executor:					
 			j_movie = executor.submit(self.fetch_vodData,self.douban_url('movie',limit,0)).result()
 			j_tv = executor.submit(self.fetch_vodData,self.douban_url('tv',limit,0)).result()			
-		return  {'list': (j_movie + j_tv)}
+		return  {'list': (j_tv + j_movie)}
 	
 	def categoryContent(self,tid,pg,filter,extend):	
 		result = {}		
