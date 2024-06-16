@@ -15,8 +15,8 @@ class Spider(Spider):
 	
 	def homeContent(self,filter=None):				
 		classes = [
-			{"type_id": "movie", "type_name": "熱播電影"}, 
-			{"type_id": "tv", "type_name": "熱播劇集"}
+			{"type_id": "tv", "type_name": "熱播劇集"},
+			{"type_id": "movie", "type_name": "熱播電影"}
 		]
 		return {'class': classes}
 	
