@@ -12,12 +12,13 @@
   "sites": [
 	{
 		"key": "YouTube",
-		"name": "Youtube",
+		"name": "YouTube",
 		"type": 3,
 		"api": "csp_Youtube",
 		"searchable": 1,
 		"quickSearch": 0,
 		"changeable": 1,
+		"jar": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/f432492d15484d04/ade77876bb0a1eaf",
 		"ext": {
 			"type": "DJ#模特兒#泳裝秀#內衣秀#小姐#健身#新歌熱榜#直播#熱門#番劇#國創#綜藝#動畫#鬼畜#舞蹈#娛樂#科技#美食#汽車#運動#電影#電視劇#紀錄片#遊戲#音樂#影視#資訊#生活#時尚#動物圈#VLOG#搞笑#單機遊戲#虛擬UP主#公益#課堂#公開課#相聲小品#動物世界#白噪音超清",
 			"proxy": ""
