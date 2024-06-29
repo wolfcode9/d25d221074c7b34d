@@ -207,7 +207,8 @@
         "綜藝",
         "動漫",
         "記錄片"
-      ]
+      ],
+	  "jar": "https://github.com/FongMi/CatVodSpider/raw/main/jar/custom_spider.jar"
     },
     {
       "key": "量子",
