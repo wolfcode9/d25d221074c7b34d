@@ -41,7 +41,7 @@
       "jar": "https://github.com/FongMi/CatVodSpider/raw/main/jar/custom_spider.jar"
     },
     {
-      "key": "6V新版",
+      "key": "新6V",
       "name": "新6V",
       "type": 3,
       "api": "csp_Xb6v",
@@ -311,7 +311,7 @@
     },
     {
       "key": "csp_Dm84",
-      "name": "巴士 | 動漫",
+      "name": "巴士",
       "type": 3,
       "api": "csp_Dm84",
       "searchable": 1,
