@@ -19,16 +19,6 @@
       "changeable": 1
     },
     {
-      "key": "csp_YingShi",
-      "name": "影視",
-      "type": 3,
-      "api": "csp_YingShi",
-      "searchable": 1,
-      "changeable": 1,
-      "url": "https://www.yingshi.tv/",
-      "jar": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/f432492d15484d04/ade77876bb0a1eaf"
-    },
-    {
       "key": "py_Mubai",
       "name": "慕白",
       "type": 3,
@@ -180,7 +170,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "https://www.libvio.pw/"
+      "ext": "https://www.libvio.cc/"
     },
     {
       "key": "奥特",
@@ -192,23 +182,6 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "https://auete.pro/"
-    },
-    {
-      "key": "csp_NiNi",
-      "name": "泥視頻",
-      "type": 3,
-      "api": "csp_NiNi",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "categories": [
-        "電影",
-        "電視劇",
-        "綜藝",
-        "動漫",
-        "記錄片"
-      ],
-	  "jar": "https://github.com/FongMi/CatVodSpider/raw/main/jar/custom_spider.jar"
     },
     {
       "key": "量子",
@@ -333,14 +306,6 @@
       "name": "飛速",
       "type": 1,
       "api": "https://www.feisuzyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "changeable": 1
-    },
-    {
-      "key": "csp_Ying",
-      "name": "櫻花 | 動漫",
-      "type": 3,
-      "api": "csp_Ying",
       "searchable": 1,
       "changeable": 1
     },
