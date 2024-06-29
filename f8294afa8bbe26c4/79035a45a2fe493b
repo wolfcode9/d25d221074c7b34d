@@ -148,15 +148,6 @@
       "filterable": 1
     },
     {
-      "key": "hghhh.com",
-      "name": "💕高潮",
-      "type": 1,
-      "api": "https://hghhh.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
-    },
-    {
       "key": "jkunzy.com",
       "name": "💕JUKN",
       "type": 1,
