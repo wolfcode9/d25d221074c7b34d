@@ -28,17 +28,7 @@
       "changeable": 1,
       "filterable": 1,
       "ext": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/6ecdf5fca6d38571/434f7b30ffedd904"
-    },
-	{
-      "key": "py_PPT",
-      "name": "PPT",
-      "type": 3,
-      "api": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/77b87ab317c584e0/sa8635f5e7348cd0d.py",
-      "url": "https://ptt.red/",
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1      
-    },	
+    },    
     {
       "key": "荐片",
       "name": "荐片",
@@ -48,6 +38,16 @@
       "changeable": 1,
       "playerType": 1,
       "ext": "https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/jianpian.json",
+      "jar": "https://github.com/FongMi/CatVodSpider/raw/main/jar/custom_spider.jar"
+    },
+	{
+      "key": "PTT",
+      "name": "PTT",
+      "type": 3,
+      "api": "csp_PTT",
+      "searchable": 1,
+      "changeable": 1,
+      "playerType": 1,      
       "jar": "https://github.com/FongMi/CatVodSpider/raw/main/jar/custom_spider.jar"
     },
     {
