@@ -99,9 +99,9 @@ class Spider(Spider):
 	def categoryContent(self,tid,pg,filter,extend):		
 		result = {}	
 		vod = []			
-		url = "http://192.168.1.9:8989/api/video/list?parent_category_id=101&page=1"
+		url = "http://210.61.186.128:8989/api/video/list"
 		pagesize = 35
-		'''
+		
 		params = {
 			"parent_category_id": tid,
 			"page": pg,
@@ -109,8 +109,8 @@ class Spider(Spider):
 			"year": extend.get("year", ""),
 			"pagesize": pagesize		
 		}
-  		'''
-		jrsp = self.fetch(url=url).json()
+  		
+		jrsp = self.fetch(url=url,params=params).json()
 		if jrsp.get("data"):
 			video_list = jrsp["data"]["video_list"]
 			for v in video_list:
