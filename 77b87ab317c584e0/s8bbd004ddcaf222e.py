@@ -139,20 +139,19 @@ class Spider(Spider):
 			for vf in jrsp.get("video_fragment_list"):
 				vod_play_urls.append(f'{vf["symbol"]}${str(video_id) + "#" + str(vf["id"])}')
 
-			result['list'] = {
-				"type_name": "",
-				"vod_id": vod.get('id', ''),
-				"vod_name": vod.get('title', ''),
-				"vod_pic": vod.get('pic', ''),
-				"vod_remarks": vod.get('description', ''),                
-				"vod_year": vod.get('year', ''),
-				"vod_area": vod.get('region', ''),
-				"vod_director": vod.get('director', ''),                
-				"vod_actor": vod.get('starring', ''),                
+			result['list'] = {				
+				"vod_id": vod["id"],
+				"vod_name": vod["title"],
+				"vod_pic": vod["pic"],
+				"vod_remarks": vod["description"],                
+				"vod_year": vod["year"],
+				"vod_area": vod["region"],
+				"vod_director": vod["director"],
+				"vod_actor": vod["starring"],
 				"vod_play_from": "UBVod",
 				"vod_play_url": vod_play_urls,
 				"vod_content": "",                
-				"vod_tag": vod.get('state', '')
+				"vod_tag": vod["state"]
 			} 			
 		return result
 	
