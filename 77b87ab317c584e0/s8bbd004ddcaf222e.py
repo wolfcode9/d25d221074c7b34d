@@ -153,6 +153,11 @@ class Spider(Spider):
 			} 			
 		return result
 	
+	def searchContentPage(self, key, quick, pg):
+		pass
+	
+	def destroy(self):
+		pass
 	#搜索頁
 	def searchContent(self,key,quick):
 		result = {}
