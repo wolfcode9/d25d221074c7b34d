@@ -99,7 +99,7 @@ class Spider(Spider):
 	def categoryContent(self,tid,pg,filter,extend):		
 		result = {}	
 		vod = []			
-		url = "http://192.168.1.9:8989/api/video/list"
+		url = f"{self.siteUrl}/api/video/list"
 		pagesize = 35
 		
 		params = {
@@ -108,8 +108,8 @@ class Spider(Spider):
 			"region": extend.get("region", ""),
 			"year": extend.get("year", ""),
 			"pagesize": pagesize		
-		}
-  		
+		}	
+			
 		jrsp = self.fetch(url=url,params=params).json()
 		if jrsp.get("data"):
 			video_list = jrsp["data"]["video_list"]
@@ -131,7 +131,7 @@ class Spider(Spider):
 	def detailContent(self, array):		
 		result = {}        
 		video_id = array[0]
-		url = "http://192.168.1.9:8989/api/video/info?video_id={video_id}"
+		url = f'{self.siteUrl}/api/video/info?video_id={video_id}'
 		jrsp = self.fetch(url=url).json()		
 		if jrsp.get("video"):
 			vod = jrsp["video"]
@@ -139,20 +139,21 @@ class Spider(Spider):
 			for vf in jrsp.get("video_fragment_list"):
 				vod_play_urls.append(f'{vf["symbol"]}${str(video_id) + "#" + str(vf["id"])}')
 
-			result['list'] = {				
-				"vod_id": vod["id"],
-				"vod_name": vod["title"],
-				"vod_pic": vod["pic"],
-				"vod_remarks": vod["description"],                
-				"vod_year": vod["year"],
-				"vod_area": vod["region"],
-				"vod_director": vod["director"],
-				"vod_actor": vod["starring"],
+			result['list'] = [{
+				"type_name": "",
+				"vod_id": vod.get('id', ''),
+				"vod_name": vod.get('title', ''),
+				"vod_pic": vod.get('pic', ''),
+				"vod_remarks": vod.get('description', ''),                
+				"vod_year": vod.get('year', ''),
+				"vod_area": vod.get('region', ''),
+				"vod_director": vod.get('director', ''),                
+				"vod_actor": vod.get('starring', ''),                
 				"vod_play_from": "UBVod",
 				"vod_play_url": vod_play_urls,
 				"vod_content": "",                
-				"vod_tag": vod["state"]
-			} 			
+				"vod_tag": vod.get('state', '')
+			}]
 		return result
 	
 	def searchContentPage(self, key, quick, pg):
@@ -167,8 +168,7 @@ class Spider(Spider):
 		return result
 	
 	#播放頁
-	def playerContent(self,flag,id,vipFlags):
-		'''
+	def playerContent(self,flag,id,vipFlags):		
 		video_id = id.split("#")[0]
 		video_fragment_id = id.split("#")[1]
 		url = f'{self.siteUrl}/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}'
@@ -179,13 +179,6 @@ class Spider(Spider):
 				'parse': '0',
 				'playUrl': '',
 				'url': source_url,
-				'header': ''
-			}
-   		'''	
-		result = {
-				'parse': '0',
-				'playUrl': '',
-				'url': '',
 				'header': ''
 			}
 		return result
@@ -212,6 +205,6 @@ class Spider(Spider):
 
 #sp = Spider()
 #print(sp.homeVideoContent())
-#print(sp.categoryContent(101,1,False,{}))
+#print(sp.categoryContent(101,1,None,None))
 #print(sp.detailContent(['75983']))
 #print(sp.fetch_video_source(video_id=75983,video_fragment=470610))
