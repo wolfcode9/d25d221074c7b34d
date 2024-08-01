@@ -1,4 +1,4 @@
-seeare#coding=utf-8
+whyseeare#coding=utf-8
 #!/usr/bin/python
 import sys
 sys.path.append('..') 
@@ -104,11 +104,6 @@ class Spider(Spider):
 	def detailContent(self, array):		
 		result = {}        
 		video_id = array[0]
-		url = f"http://192.168.1.9:8989/api/video/info?video_id={video_id}"
-		jrsp = self.fetch(url=url).json()		
-		if jrsp.get("video"):
-			vod = jrsp["video"]
-
 
 			result['list'] = [{
 				"type_name": "",
