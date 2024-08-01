@@ -1,4 +1,4 @@
-are#coding=utf-8
+seeare#coding=utf-8
 #!/usr/bin/python
 import sys
 sys.path.append('..') 
@@ -109,6 +109,7 @@ class Spider(Spider):
 		if jrsp.get("video"):
 			vod = jrsp["video"]
 
+
 			result['list'] = [{
 				"type_name": "",
 				"vod_id": vod.get('id', ''),
@@ -120,7 +121,7 @@ class Spider(Spider):
 				"vod_director": vod.get('director', ''),                
 				"vod_actor": vod.get('starring', ''),                
 				"vod_play_from": "UBVod",
-				"vod_play_url": vod_play_urls,
+				"vod_play_url": "",
 				"vod_content": "",                
 				"vod_tag": ""
 			}]
