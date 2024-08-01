@@ -63,13 +63,11 @@ class Spider(Spider):
 		return result
 	
 	#推薦頁
-	def homeVideoContent(self):
-		return {}
-		'''
+	def homeVideoContent(self):		
 		result = {}	
 		vod = []	
-		url_movie = f"{self.siteUrl}/api/video/recommend?parent_category_id=100&page=1&pagesize=1&kind=0"
-		url_tv = f"{self.siteUrl}/api/video/recommend?parent_category_id=101&page=1&&pagesize=1&kind=0"
+		url_movie = "http://192.168.1.9:8989/api/video/recommend?parent_category_id=100&page=1&pagesize=1&kind=0"
+		url_tv = "http://192.168.1.9:8989/api/video/recommend?parent_category_id=101&page=1&&pagesize=1&kind=0"
 		with concurrent.futures.ThreadPoolExecutor() as executor:					
 			result_movie = executor.submit(self.fetch,url_movie).result().json().get("video_hot_list")
 			result_tv = executor.submit(self.fetch,url_tv).result().json().get("video_hot_list")
@@ -92,8 +90,7 @@ class Spider(Spider):
 				"vod_tag": v["state"]
 			})			      
 		result['list'] = vod
-		return result
-		'''
+		return result	
 	
 	#分類頁
 	def categoryContent(self,tid,pg,filter,extend):		
