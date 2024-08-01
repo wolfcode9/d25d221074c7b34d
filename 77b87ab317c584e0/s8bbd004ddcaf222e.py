@@ -91,7 +91,7 @@ class Spider(Spider):
 					"vod_id": v["id"],
 					"vod_name": v["title"],
 					"vod_pic": v["pic"],
-					"vod_remarks": v["description"]
+					"vod_remarks": v["state"]
             	})
 			result["list"] = vod
 			result["page"] = pg
