@@ -1,11 +1,9 @@
 #coding=utf-8
 #!/usr/bin/python
 import sys
-import json
 sys.path.append('..') 
 from base.spider import Spider
 import concurrent.futures
-import json
 import datetime
 
 class Spider(Spider):
@@ -66,6 +64,7 @@ class Spider(Spider):
 	
 	#推薦頁
 	def homeVideoContent(self):
+		return {}
 		result = {}	
 		vod = []	
 		url_movie = f"{self.siteUrl}/api/video/recommend?parent_category_id=100&page=1&pagesize=1&kind=0"
@@ -158,6 +157,7 @@ class Spider(Spider):
 	
 	def destroy(self):
 		pass
+
 	#搜索頁
 	def searchContent(self,key,quick):
 		result = {}
@@ -196,10 +196,4 @@ class Spider(Spider):
 			'type':'string',
 			'after':''
 		}
-		return [200, "video/MP2T", action, ""]	
-	
-
-#sp = Spider()
-#print(sp.categoryContent(101,1,False,{"pagesize":1}))
-#print(sp.detailContent(['75983']))
-#print(sp.fetch_video_source(video_id=75983,video_fragment=470610))
+		return [200, "video/MP2T", action, ""]
