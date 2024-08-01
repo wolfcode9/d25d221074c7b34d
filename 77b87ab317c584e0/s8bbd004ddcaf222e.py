@@ -1,4 +1,4 @@
-#coding=utf-8
+are#coding=utf-8
 #!/usr/bin/python
 import sys
 sys.path.append('..') 
@@ -108,7 +108,6 @@ class Spider(Spider):
 		jrsp = self.fetch(url=url).json()		
 		if jrsp.get("video"):
 			vod = jrsp["video"]
-			"])}')
 
 			result['list'] = [{
 				"type_name": "",
