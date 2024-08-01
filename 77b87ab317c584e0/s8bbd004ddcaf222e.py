@@ -43,7 +43,7 @@ class Spider(Spider):
 		return "UBVod"
 	
 	def init(self,extend=""):
-		self.siteUrl = extend
+		pass
 	
 	#主頁
 	def homeContent(self,filter):
