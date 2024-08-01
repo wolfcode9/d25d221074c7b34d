@@ -54,6 +54,9 @@ class Spider(Spider):
 		result = {}
 		return result
 	
+	def destroy(self):
+		pass
+
 	def isVideoFormat(self,url):
 		pass
 	
