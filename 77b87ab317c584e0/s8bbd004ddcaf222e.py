@@ -99,7 +99,7 @@ class Spider(Spider):
 	def categoryContent(self,tid,pg,filter,extend):		
 		result = {}	
 		vod = []			
-		url = f"{self.siteUrl}/api/video/list?parent_category_id=101&page=1"
+		url = "http://192.168.1.9:8989/api/video/list?parent_category_id=101&page=1"
 		pagesize = 35
 		'''
 		params = {
