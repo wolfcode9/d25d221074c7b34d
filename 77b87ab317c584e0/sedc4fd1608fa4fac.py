@@ -10,10 +10,10 @@ class Spider(Spider):
 	def getName(self):
 		return "豆瓣薦片"
 	
-	def init(self,extend=""):
+	def init(self,extend):
 		pass	
 	
-	def homeContent(self,filter=None):				
+	def homeContent(self,filter):				
 		classes = [
 			{"type_id": "tv", "type_name": "熱播劇集"},
 			{"type_id": "movie", "type_name": "熱播電影"}
@@ -49,6 +49,9 @@ class Spider(Spider):
 	def searchContent(self,key,quick):
 		result = {}
 		return result
+	
+	def searchContentPage(self, key, quick, pg):
+		pass
 	
 	def playerContent(self,flag,id,vipFlags):
 		result = {}
