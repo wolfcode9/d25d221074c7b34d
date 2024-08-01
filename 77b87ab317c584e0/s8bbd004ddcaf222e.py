@@ -186,7 +186,7 @@ class Spider(Spider):
 		result = {
 				'parse': '0',
 				'playUrl': '',
-				'url': source_url,
+				'url': '',
 				'header': ''
 			}
 		return result
