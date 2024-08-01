@@ -8,7 +8,7 @@ import datetime
 
 class Spider(Spider):
 	
-	siteUrl = "http://210.61.186.128:8989"
+	siteUrl = "http://192.168.1.9:8989" #"http://210.61.186.128:8989"
 	header = {
 		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Referer":  siteUrl
