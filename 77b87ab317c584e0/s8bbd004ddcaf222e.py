@@ -21,7 +21,7 @@ class Spider(Spider):
 	config = {
 		"player": {},
 		"filter": [
-			{"key": "area", "name": "地區", "value": [
+			{"key": "region", "name": "地區", "value": [
 				{"n": "全部", "v": ""},
 				{"n": "大陸", "v": "大陸"},
 				{"n": "歐美", "v": "歐美"},
@@ -64,8 +64,36 @@ class Spider(Spider):
 	
 	#推薦頁
 	def homeVideoContent(self):
-		result = {}
+		return {}
+		'''
+		result = {}	
+		vod = []	
+		url_movie = f"{self.siteUrl}/api/video/recommend?parent_category_id=100&page=1&pagesize=1&kind=0"
+		url_tv = f"{self.siteUrl}/api/video/recommend?parent_category_id=101&page=1&&pagesize=1&kind=0"
+		with concurrent.futures.ThreadPoolExecutor() as executor:					
+			result_movie = executor.submit(self.fetch,url_movie).result().json().get("video_hot_list")
+			result_tv = executor.submit(self.fetch,url_tv).result().json().get("video_hot_list")
+			result = result_movie + result_tv
+
+		for v in result:			
+			vod.append({
+				"type_name": "",
+				"vod_id": v["id"],
+				"vod_name": v["title"],
+				"vod_pic": v["pic"],
+				"vod_remarks": v["description"],
+				"vod_year": v["year"],
+				"vod_area": v["region"],
+				"vod_director": v["director"],
+				"vod_actor": v["starring"],
+				"vod_play_from": "UBVod",
+				"vod_play_url": "",
+				"vod_content": "",				
+				"vod_tag": v["state"]
+			})			      
+		result['list'] = vod
 		return result
+		'''
 	
 	#分類頁
 	def categoryContent(self,tid,pg,filter,extend):		
@@ -78,7 +106,7 @@ class Spider(Spider):
 			"page": pg,
 			"region": extend.get("region", ""),
 			"year": extend.get("year", ""),
-			"pagesize": extend.get("pagesize",pagesize)			
+			"pagesize": pagesize		
 		}		
 		jrsp = self.fetch(url=url,params=params).json()
 		if jrsp.get("data"):
@@ -170,4 +198,11 @@ class Spider(Spider):
 			'type':'string',
 			'after':''
 		}
-		return [200, "video/MP2T", action, ""]
+		return [200, "video/MP2T", action, ""]	
+	
+
+#sp = Spider()
+#print(sp.homeVideoContent())
+#print(sp.categoryContent(101,1,False,{}))
+#print(sp.detailContent(['75983']))
+#print(sp.fetch_video_source(video_id=75983,video_fragment=470610))
