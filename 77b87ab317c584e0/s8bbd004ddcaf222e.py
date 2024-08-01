@@ -1,4 +1,4 @@
-whyseeare#coding=utf-8
+wewhyseeare#coding=utf-8
 #!/usr/bin/python
 import sys
 sys.path.append('..') 
@@ -106,19 +106,8 @@ class Spider(Spider):
 		video_id = array[0]
 
 			result['list'] = [{
-				"type_name": "",
-				"vod_id": vod.get('id', ''),
-				"vod_name": vod.get('title', ''),
-				"vod_pic": vod.get('pic', ''),
-				"vod_remarks": vod.get('state', ''),                
-				"vod_year": vod.get('year', ''),
-				"vod_area": vod.get('region', ''),
-				"vod_director": vod.get('director', ''),                
-				"vod_actor": vod.get('starring', ''),                
-				"vod_play_from": "UBVod",
-				"vod_play_url": "",
-				"vod_content": "",                
-				"vod_tag": ""
+				"vod_id": video_id,
+				"vod_play_from": "UBVod"
 			}]
 		return result
 	
