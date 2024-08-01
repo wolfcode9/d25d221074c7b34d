@@ -102,13 +102,7 @@ class Spider(Spider):
 	
 	#詳情頁
 	def detailContent(self, array):		
-		result = {}        
-		video_id = array[0]
-
-			result['list'] = [{
-				"vod_id": video_id,
-				"vod_play_from": "UBVod"
-			}]
+		result = {} 
 		return result
 	
 	def searchContentPage(self, key, quick, pg):
@@ -157,9 +151,3 @@ class Spider(Spider):
 		}
 		return [200, "video/MP2T", action, ""]	
 	
-
-#sp = Spider()
-#print(sp.homeVideoContent())
-#print(sp.categoryContent(101,1,None,None))
-#print(sp.detailContent(['75983']))
-#print(sp.fetch_video_source(video_id=75983,video_fragment=470610))
