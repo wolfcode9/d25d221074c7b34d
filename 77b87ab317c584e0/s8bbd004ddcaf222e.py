@@ -131,7 +131,7 @@ class Spider(Spider):
 	def detailContent(self, array):		
 		result = {}        
 		video_id = array[0]
-		url = f'{self.siteUrl}/api/video/info?video_id={video_id}'
+		url = "http://192.168.1.9:8989/api/video/info?video_id={video_id}"
 		jrsp = self.fetch(url=url).json()		
 		if jrsp.get("video"):
 			vod = jrsp["video"]
@@ -168,7 +168,8 @@ class Spider(Spider):
 		return result
 	
 	#播放頁
-	def playerContent(self,flag,id,vipFlags):		
+	def playerContent(self,flag,id,vipFlags):
+		'''
 		video_id = id.split("#")[0]
 		video_fragment_id = id.split("#")[1]
 		url = f'{self.siteUrl}/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}'
@@ -181,7 +182,8 @@ class Spider(Spider):
 				'url': source_url,
 				'header': ''
 			}
-		return result
+   		'''	
+		return {} #result
 	
 	#視頻格式
 	def isVideoFormat(self,url):
