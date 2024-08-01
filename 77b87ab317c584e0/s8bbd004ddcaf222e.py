@@ -108,7 +108,7 @@ class Spider(Spider):
 			"year": extend.get("year", ""),
 			"pagesize": pagesize		
 		}		
-		jrsp = self.fetch(url=url,params=params).json()
+		jrsp = self.fetch(url=url).json()
 		if jrsp.get("data"):
 			video_list = jrsp["data"]["video_list"]
 			for v in video_list:
