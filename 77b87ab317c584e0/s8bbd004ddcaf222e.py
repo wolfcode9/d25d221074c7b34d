@@ -101,13 +101,15 @@ class Spider(Spider):
 		vod = []			
 		url = f"{self.siteUrl}/api/video/list?parent_category_id=101&page=1"
 		pagesize = 35
+		'''
 		params = {
 			"parent_category_id": tid,
 			"page": pg,
 			"region": extend.get("region", ""),
 			"year": extend.get("year", ""),
 			"pagesize": pagesize		
-		}		
+		}
+  		'''
 		jrsp = self.fetch(url=url).json()
 		if jrsp.get("data"):
 			video_list = jrsp["data"]["video_list"]
