@@ -99,7 +99,7 @@ class Spider(Spider):
 	def categoryContent(self,tid,pg,filter,extend):		
 		result = {}	
 		vod = []			
-		url = f"{self.siteUrl}/api/video/list"
+		url = "http://192.168.1.9:8989/api/video/list"
 		pagesize = 35
 		
 		params = {
@@ -131,7 +131,7 @@ class Spider(Spider):
 	def detailContent(self, array):		
 		result = {}        
 		video_id = array[0]
-		url = f'{self.siteUrl}/api/video/info?video_id={video_id}'
+		url = f"http://192.168.1.9:8989/api/video/info?video_id={video_id}"
 		jrsp = self.fetch(url=url).json()		
 		if jrsp.get("video"):
 			vod = jrsp["video"]
@@ -171,7 +171,7 @@ class Spider(Spider):
 	def playerContent(self,flag,id,vipFlags):		
 		video_id = id.split("#")[0]
 		video_fragment_id = id.split("#")[1]
-		url = f'{self.siteUrl}/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}'
+		url = f"http://192.168.1.9:8989/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}"
 		jrsp = self.fetch(url=url).json()		
 		if jrsp.get("data"):
 			source_url = jrsp["data"]["video_soruce"]["url"].split("?")[0]
