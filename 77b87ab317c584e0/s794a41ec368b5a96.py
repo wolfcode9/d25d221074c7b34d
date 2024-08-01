@@ -127,6 +127,12 @@ class Spider(Spider):
 		result['list'] = vod
 		return result
 	
+	def searchContentPage(self, key, quick, pg):
+		pass
+
+	def searchContentPage(self, key, quick, pg):
+		pass
+
 	def playerContent(self,flag,id,vipFlags):
 		result = {
         	'parse': '0',
@@ -136,6 +142,9 @@ class Spider(Spider):
         }
 		return result
 	
+	def destroy(self):
+		pass
+
 	def isVideoFormat(self,url):
 		pass
 	
