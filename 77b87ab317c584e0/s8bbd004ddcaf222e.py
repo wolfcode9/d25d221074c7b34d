@@ -183,7 +183,13 @@ class Spider(Spider):
 				'header': ''
 			}
    		'''	
-		return {} #result
+		result = {
+				'parse': '0',
+				'playUrl': '',
+				'url': source_url,
+				'header': ''
+			}
+		return result
 	
 	#視頻格式
 	def isVideoFormat(self,url):
