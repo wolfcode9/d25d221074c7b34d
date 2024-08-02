@@ -88,15 +88,15 @@ class Spider(Spider):
 	def homeVideoContent(self):	
 		result = {}		
 		video = []		
-		video_list = []
-		pagesize = 10
-		#key = hot:熱門  update:最近更新  release:最新上片
-		key = "hot"
+		video_list = []				
+		
 		if self.vip:
-			pagesize = 40
-			key = "hot"
+			pagesize = 100
+			key = "release" #key = hot:熱門  update:最近更新  release:最新上片
 			parent_category_ids = [108]
-		else:		
+		else:
+			pagesize = 10
+			key = "hot"
 			parent_category_ids = [100, 101, 102, 103]
 
 		# 使用 ThreadPoolExecutor 進行並行請求
@@ -113,8 +113,12 @@ class Spider(Spider):
 				parent_category_id = future_to_category[future]
 				try:
 					response = future.result()
-					data = response.json()				
-					video_list.extend(data.get("video_hot_list", []))
+					data = response.json()
+					if key == "key":
+						video_list.extend(data.get("video_hot_list", []))
+					else:
+						video_list.extend(data.get("video_latest_list", []))
+
 				except Exception as ex:
 					print(ex)
 
@@ -137,7 +141,7 @@ class Spider(Spider):
 		result = {}	
 		video = []			
 		url = f"{self.siteUrl}/api/video/list"
-		pagesize = 35
+		pagesize = 20
 		
 		params = {
 			"parent_category_id": tid,
