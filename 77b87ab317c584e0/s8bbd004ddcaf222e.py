@@ -153,23 +153,26 @@ class Spider(Spider):
 
 		if jrsp.get("video"):
 			vod = jrsp["video"]
+			video = []
 			vod_play_urls = []
 			for vf in jrsp.get("video_fragment_list"):
 				vod_play_urls.append(f'{vf["symbol"]}${str(video_id) + "#" + str(vf["id"])}')
 
-		result["list"] = [{
-			"type_name": "",
-			"vod_id": vod.get("id", ""),
-			"vod_name": vod.get("title", ""),		
-			"vod_remarks": vod.get("description", ""),
-			"vod_year": vod.get("year", ""),
-			"vod_area": vod.get("region", ""),
-			"vod_actor": vod.get("starring", ""),
-			"vod_director": vod.get("director", ""),
-			"vod_content": "",	
-			"vod_play_from": "UBVod",
-			"vod_play_url": vod_play_urls
-		}]		
+			video.append ({			
+				"type_name": "",
+				"vod_id": vod.get("id", ""),
+				"vod_name": vod.get("title", ""),		
+				"vod_remarks": vod.get("description", ""),
+				"vod_year": vod.get("year", ""),
+				"vod_area": vod.get("region", ""),
+				"vod_actor": vod.get("starring", ""),
+				"vod_director": vod.get("director", ""),
+				"vod_content": "",	
+				"vod_play_from": "UBVod",
+				"vod_play_url": vod_play_urls
+			})
+			result['list'] = video
+			
 		return result
 
 	#播放頁
