@@ -94,7 +94,7 @@ class Spider(Spider):
 		key = "hot"
 		if self.vip:
 			pagesize = 30
-			key = "release"
+			key = "hot"
 			parent_category_ids = [108]
 		else:		
 			parent_category_ids = [100, 101, 102, 103]
