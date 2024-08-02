@@ -63,11 +63,10 @@ class Spider(Spider):
 	
 	#推薦頁
 	def homeVideoContent(self):		
-		result = {}	
-		
-		video = []	
-		url_movie = f'{self.siteUrl}/api/video/recommend?parent_category_id=100&page=1&pagesize=20&kind=0'
-		url_tv = f'{self.siteUrl}/api/video/recommend?parent_category_id=101&page=1&&pagesize=20&kind=0'
+		result = {}			
+		video = []			
+		url_movie = "{}/api/video/recommend?parent_category_id=100&page=1&pagesize=20&kind=0".format(self.siteUrl)
+		url_tv = "{}/api/video/recommend?parent_category_id=101&page=1&&pagesize=20&kind=0".format(self.siteUrl)
 		with concurrent.futures.ThreadPoolExecutor() as executor:                    
 			jrsp_movie = executor.submit(self.fetch, url_movie).result().json().get("video_hot_list")
 			jrsp_tv = executor.submit(self.fetch, url_tv).result().json().get("video_hot_list")
@@ -89,7 +88,7 @@ class Spider(Spider):
 	def categoryContent(self, tid, pg, filter, extend):		
 		result = {}	
 		video = []			
-		url = f'{self.siteUrl}/api/video/list'
+		url = "{}/api/video/list".format(self.siteUrl)		
 		pagesize = 35
 		
 		params = {
@@ -124,7 +123,7 @@ class Spider(Spider):
 	def searchContentPage(self, key, quick, pg):
 		result = {}	
 		video = []			
-		url = f'{self.siteUrl}/api/video/list'
+		url = "{}/api/video/list".format(self.siteUrl)
 		pagesize = 35
 		params = {
 			"keyword": key,
@@ -148,15 +147,15 @@ class Spider(Spider):
 	def detailContent(self, ids):
 		result = {}
 		video_id = ids[0]
-		url = f'{self.siteUrl}/api/video/info?video_id={video_id}'
+		url = "{}/api/video/info?video_id={}".format(self.siteUrl,video_id)
 		jrsp = self.fetch(url=url).json()
 
 		if jrsp.get("video"):
 			vod = jrsp["video"]
 			video = []
-			vod_play_urls = []
+			vod_play_urls  = ""
 			for vf in jrsp.get("video_fragment_list"):
-				vod_play_urls.append('#'.join([vf["symbol"] + '$' + str(video_id) + "@" + str(vf["id"])]))				
+				vod_play_urls += "{}${}_{}#".format(vf["symbol"], video_id, vf["id"])
 
 			video.append ({			
 				"type_name": "",
@@ -169,17 +168,18 @@ class Spider(Spider):
 				"vod_director": vod.get("director", ""),
 				"vod_content": "",	
 				"vod_play_from": "UBVod",
-				"vod_play_url": '#'.join(vod_play_urls)
+				"vod_play_url": vod_play_urls.strip('#')
 			})
 			result['list'] = video
 
 		return result
 
 	#播放頁
-	def playerContent(self, flag, id, vipFlags):	
-		video_id = id.split("@")[0]
-		video_fragment_id = id.split("@")[1]
-		url = f"http://192.168.1.9:8989/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}"
+	def playerContent(self, flag, id, vipFlags):
+		ids = id.split("_")
+		video_id = ids[0]
+		video_fragment_id = ids[1]
+		url = "{}/api/video/source?video_id={}&video_fragment_id={}".format(self.siteUrl,video_id,video_fragment_id)
 		jrsp = self.fetch(url=url).json()		
 		if jrsp.get("data"):
 			source_url = jrsp["data"]["video_soruce"]["url"].split("?")[0]
