@@ -57,10 +57,13 @@ class Spider(Spider):
 		return "UBVod"
 	
 	
-	def init(self,extend):		
-		data = json.loads(extend)
-		self.siteUrl = data.get("url","http://210.61.186.128:8989")
-		self.vip = data.get("vip",0)
+	def init(self,extend):
+		if extend:
+			data = json.loads(extend)
+			self.siteUrl = data["url"]
+			self.vip = data["vip"]
+		else:
+			self.siteUrl = "http://210.61.186.128:8989"
 
 	
 	#主頁
