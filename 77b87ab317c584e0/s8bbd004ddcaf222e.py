@@ -58,13 +58,13 @@ class Spider(Spider):
 	
 	
 	def init(self,extend):
-		if extend:
+		try:
 			data = json.loads(extend)
 			self.siteUrl = data["url"]
 			self.vip = data["vip"]
-		else:
-			pass #self.siteUrl = "http://210.61.186.128:8989"
-
+		except:
+			pass
+		
 	
 	#主頁
 	def homeContent(self, filter):
@@ -92,7 +92,7 @@ class Spider(Spider):
 		video_list = []
 		pagesize = 10
 		if self.vip:
-			pagesize = 40
+			pagesize = 100
 			parent_category_ids = [108]
 		else:		
 			parent_category_ids = [100, 101, 102, 103]
