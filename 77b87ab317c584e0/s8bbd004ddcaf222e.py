@@ -54,7 +54,7 @@ class Spider(Spider):
 			{"type_id": "102", "type_name": "綜藝"}, 
 			{"type_id": "103", "type_name": "動漫" },
 			{"type_id": "105", "type_name": "紀實" },
-			{"type_id": "107", "type_name": "少兒" },
+			#{"type_id": "107", "type_name": "少兒" },
 			{"type_id": "108", "type_name": "成人" },
 		]
 		result = {"filters": {item["type_id"]: self.config["filter"] for item in classes}, "class": classes}
@@ -101,11 +101,19 @@ class Spider(Spider):
 		if jrsp.get("data"):
 			vdata = jrsp["data"]["video_list"]
 			for vod in vdata:
+				remarks = ""
+				parent_category_id = vod["parent_category_id"]
+				state = vod["state"]
+				last_fragment_symbol = vod["last_fragment_symbol"]	
+				if ["100","107","108"] in parent_category_id:
+					remarks = ""
+				else:				
+					remarks = "{} 共{}集".format(state,last_fragment_symbol)
 				video.append({
 					"vod_id": vod["id"],
 					"vod_name": vod["title"],
 					"vod_pic": vod["pic"],
-					"vod_remarks": vod["state"]
+					"vod_remarks": remarks
             	})
 			result["list"] = video
 			result["page"] = pg
@@ -155,17 +163,26 @@ class Spider(Spider):
 			vod_play_urls  = ""
 			for vf in jrsp.get("video_fragment_list"):
 				vod_play_urls += "{}${}_{}#".format(vf["symbol"], video_id, vf["id"])
+			
+			remarks = ""
+			parent_category_id = vod["parent_category_id"]
+			state = vod["state"]
+			last_fragment_symbol = vod["last_fragment_symbol"]	
+			if ["100","107","108"] in parent_category_id:
+				remarks = ""
+			else:				
+				remarks = "{} 共{}集".format(state,last_fragment_symbol)
 
 			video.append ({			
 				"type_name": "",
 				"vod_id": vod.get("id", ""),
 				"vod_name": vod.get("title", ""),		
-				"vod_remarks": vod.get("description", ""),
+				"vod_remarks": remarks,
 				"vod_year": vod.get("year", ""),
 				"vod_area": vod.get("region", ""),
 				"vod_actor": vod.get("starring", ""),
 				"vod_director": vod.get("director", ""),
-				"vod_content": "",	
+				"vod_content":  vod.get("description", ""),
 				"vod_play_from": "安博",
 				"vod_play_url": vod_play_urls.strip('#')
 			})
@@ -186,7 +203,7 @@ class Spider(Spider):
 				"parse": "0",
 				"playUrl": "",
 				"url": video_url,
-				"header": self.header
+				"header": ""
 			}
 	
 		return result
