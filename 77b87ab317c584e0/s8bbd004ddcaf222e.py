@@ -56,7 +56,7 @@ class Spider(Spider):
 		return "UBVod"
 	
 	
-	def init(self,extend):
+	def init(self,extend={}):
 		self.siteUrl = extend.get("url")
 		self.relax = extend.get("vip")
 
@@ -251,13 +251,13 @@ class Spider(Spider):
 		try:
 			response = self.fetch(url=url)
 			data = response.json()		
-			video_url = data["data"]["video_soruce"]["url"].split("?")[0]
+			video_url = data["data"]["video_soruce"]["url"].split("?")[0] 
 			result = {
 				"parse": "0",
 				"playUrl": "",
 				"url": video_url,
 				"header": ""
-			}
+			} 
 
 		except Exception as ex:
 			print(ex)
