@@ -176,14 +176,7 @@ class Spider(Spider):
 		return result
 
 	#播放頁
-	def playerContent(self, flag, id, vipFlags):
-		result = {
-			"parse": 0,
-			"playUrl": "",
-			"url": "https://32-cdn.livecdn.me/content/dsj-shcm-20240731-shd-01.mp4/index.m3u8",
-			"header": self.header
-		}
-		'''
+	def playerContent(self, flag, id, vipFlags):	
 		video_id = id.split("@")[0]
 		video_fragment_id = id.split("@")[1]
 		url = f"http://192.168.1.9:8989/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}"
@@ -194,9 +187,9 @@ class Spider(Spider):
 				"parse": "0",
 				"playUrl": "",
 				"url": source_url,
-				"header": ""
+				"header": self.header
 			}
-		'''
+	
 		return result
 	
 	#釋放資源
