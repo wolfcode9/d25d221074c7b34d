@@ -77,7 +77,9 @@ class Spider(Spider):
 	
 	#推薦頁
 	def homeVideoContent(self):
+		
 		result = {}
+		'''
 		video = []		
 		video_list = []
 		pagesize = 10
@@ -111,7 +113,7 @@ class Spider(Spider):
 			})
 		
 		result["list"] = video
-		
+		'''
 		return result
 		
 	
@@ -268,7 +270,7 @@ class Spider(Spider):
 	#視頻檢測
 	def manualVideoCheck(self):
 		pass
-	
+
 	
 	#本地代理
 	def localProxy(self, param):
