@@ -85,8 +85,7 @@ class Spider(Spider):
 	
 	
 	#推薦頁
-	def homeVideoContent(self):
-		
+	def homeVideoContent(self):	
 		result = {}		
 		video = []		
 		video_list = []
@@ -100,7 +99,7 @@ class Spider(Spider):
 		with concurrent.futures.ThreadPoolExecutor() as executor:
 			# 提交所有請求並創建 future-to-category 字典
 			future_to_category = {
-				executor.submit(self.fetch, f"{self.siteUrl}/api/video/recommend?parent_category_id={parent_category_id}&page=1&pagesize={pagesize}&kind=0"): 
+				executor.submit(self.fetch, f"{self.siteUrl}/api/video/recommend?parent_category_id={parent_category_id}&page=1&pagesize={pagesize}&key=hot"): 
 				parent_category_id for parent_category_id in parent_category_ids
 			}
 			
