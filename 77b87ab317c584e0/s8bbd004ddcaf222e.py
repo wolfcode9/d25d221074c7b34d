@@ -90,8 +90,11 @@ class Spider(Spider):
 		video = []		
 		video_list = []
 		pagesize = 10
+		#key = hot:熱門  update:最近更新  release:最新上片
+		key = "hot"
 		if self.vip:
-			pagesize = 100
+			pagesize = 300
+			key = "release"
 			parent_category_ids = [108]
 		else:		
 			parent_category_ids = [100, 101, 102, 103]
@@ -99,7 +102,7 @@ class Spider(Spider):
 		with concurrent.futures.ThreadPoolExecutor() as executor:
 			# 提交所有請求並創建 future-to-category 字典
 			future_to_category = {
-				executor.submit(self.fetch, f"{self.siteUrl}/api/video/recommend?parent_category_id={parent_category_id}&page=1&pagesize={pagesize}&key=hot"): 
+				executor.submit(self.fetch, f"{self.siteUrl}/api/video/recommend?parent_category_id={parent_category_id}&page=1&pagesize={pagesize}&key={key}"): 
 				parent_category_id for parent_category_id in parent_category_ids
 			}
 			
