@@ -66,8 +66,8 @@ class Spider(Spider):
 		result = {}	
 		
 		video = []	
-		url_movie = f'{self.siteUrl}/api/video/recommend?parent_category_id=100&page=1&pagesize=15&kind=0'
-		url_tv = f'{self.siteUrl}/api/video/recommend?parent_category_id=101&page=1&&pagesize=15&kind=0'
+		url_movie = f'{self.siteUrl}/api/video/recommend?parent_category_id=100&page=1&pagesize=20&kind=0'
+		url_tv = f'{self.siteUrl}/api/video/recommend?parent_category_id=101&page=1&&pagesize=20&kind=0'
 		with concurrent.futures.ThreadPoolExecutor() as executor:                    
 			jrsp_movie = executor.submit(self.fetch, url_movie).result().json().get("video_hot_list")
 			jrsp_tv = executor.submit(self.fetch, url_tv).result().json().get("video_hot_list")
@@ -117,7 +117,7 @@ class Spider(Spider):
 		return result 
 	
 	#詳情頁
-	def detailContent(self, ids):		
+	def detailContent(self, ids):
 		result = {}
 		video_id = ids[0]
 		url = f'{self.siteUrl}/api/video/info?video_id={video_id}'
@@ -173,6 +173,13 @@ class Spider(Spider):
 
 	#播放頁
 	def playerContent(self, flag, id, vipFlags):
+		result = {
+				"parse": "0",
+				"playUrl": "",
+				"url": id,
+				"header": ""
+		}
+		'''
 		video_id = id.split("#")[0]
 		video_fragment_id = id.split("#")[1]
 		url = f"http://192.168.1.9:8989/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}"
@@ -185,6 +192,7 @@ class Spider(Spider):
 				"url": source_url,
 				"header": ""
 			}
+		'''
 		return result
 	
 	#釋放資源

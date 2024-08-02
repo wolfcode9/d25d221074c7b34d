@@ -13,7 +13,7 @@ class Spider(Spider):
 		return "慕白"
 	
 	def init(self,extend=""):
-		self.extend = extend		
+		self.extend = extend
 		
 	def homeContent(self,filter):		
 		result = {}
@@ -78,10 +78,10 @@ class Spider(Spider):
 			result['total'] = jsonData['page']['total']
 		return result 
 	
-	def detailContent(self,array):
+	def detailContent(self, ids):
 		#https://m.mubai.link/api/filmDetail?id=77886
 		result = {}		
-		id = array[0]
+		id = ids[0]
 		url = f"{self.siteUrl}/api/filmDetail?id={id}"
 		rsp = self.fetch(url)
 		if rsp.text:
