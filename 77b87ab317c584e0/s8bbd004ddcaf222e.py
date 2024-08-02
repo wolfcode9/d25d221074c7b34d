@@ -90,7 +90,7 @@ class Spider(Spider):
 		video = []		
 		video_list = []
 		
-		by = 0 #key = 0:熱門  1:最近更新  2:最新上片
+		by = 2 #key = 0:熱門  1:最近更新  2:最新上映
 
 		if self.vip:
 			pagesize = 100			
