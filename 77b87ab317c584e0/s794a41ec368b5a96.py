@@ -27,7 +27,7 @@ class Spider(Spider):
 		]
 		result['class'] = classes
 		result['filters'] = self.filters()
-		
+
 		return result
 	
 	def homeVideoContent(self):		
@@ -204,4 +204,4 @@ class Spider(Spider):
 			]
 		}
 
-		return {key: [{"key": "Category", "name": "类型", "value": value}, {"key": "Year", "name": "年份", "value": years}] for key, value in categories.items()}
+		return [{key: [{"key": "Category", "name": "类型", "value": value}, {"key": "Year", "name": "年份", "value": years}] for key, value in categories.items()}]
