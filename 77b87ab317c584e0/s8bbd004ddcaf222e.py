@@ -93,12 +93,12 @@ class Spider(Spider):
 		#key = hot:熱門  update:最近更新  release:最新上片
 		key = "hot"
 		if self.vip:
-			pagesize = 100
-			key = "release"
+			pagesize = 35
+			key = "hot"
 			parent_category_ids = [108]
 		else:		
 			parent_category_ids = [100, 101, 102, 103]
-			
+
 		# 使用 ThreadPoolExecutor 進行並行請求
 		with concurrent.futures.ThreadPoolExecutor() as executor:
 			# 提交所有請求並創建 future-to-category 字典
