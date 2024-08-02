@@ -21,7 +21,7 @@
     {
       "key": "py_Mubai",
       "name": "慕白",
-      "type": 3,
+      "type": 3,      
       "api": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/77b87ab317c584e0/s794a41ec368b5a96.py",
       "url": "https://m.mubai.link/",
       "searchable": 1,
@@ -32,20 +32,19 @@
 	{
       "key": "py_UBVod",
       "name": "UBVod",
-      "type": 3,
+      "type": 3,      
       "api": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/77b87ab317c584e0/s8bbd004ddcaf222e.py",
       "searchable": 1,
       "changeable": 1,
-      "filterable": 1
+      "timeout": 60      
     },   
     {
       "key": "荐片",
       "name": "荐片",
-      "type": 3,
+      "type": 3,      
       "api": "csp_Jianpian",
       "searchable": 1,
-      "changeable": 1,
-      "playerType": 1,
+      "changeable": 1,      
       "ext": "https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/jianpian.json",
       "jar": "https://github.com/FongMi/CatVodSpider/raw/main/jar/custom_spider.jar"
     },
@@ -144,8 +143,7 @@
       "name": "南瓜",
       "type": 3,
       "api": "csp_NanGua",
-      "timeout": 15,
-      "playerType": 2,
+      "timeout": 15,      
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1
