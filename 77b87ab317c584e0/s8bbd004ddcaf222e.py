@@ -92,7 +92,7 @@ class Spider(Spider):
 		
 		if self.vip:
 			pagesize = 100
-			key = "release" #key = hot:熱門  update:最近更新  release:最新上片
+			key = "hot" #key = hot:熱門  update:最近更新  release:最新上片
 			parent_category_ids = [108]
 		else:
 			pagesize = 10
@@ -114,6 +114,7 @@ class Spider(Spider):
 				try:
 					response = future.result()
 					data = response.json()
+
 					if key == "hot":
 						video_list.extend(data.get("video_hot_list", []))
 					else:
