@@ -5,6 +5,7 @@ sys.path.append('..')
 from base.spider import Spider
 import requests
 import re
+import json
 from datetime import datetime
 
 
@@ -26,8 +27,8 @@ class Spider(Spider):
 			{"type_id": "4", "type_name": "動漫" }
 		]
 		result['class'] = classes
-		result['filters'] = self.filters()
-
+		result['filters'] =  self.categories()
+		
 		return result
 	
 	def homeVideoContent(self):		
@@ -163,7 +164,7 @@ class Spider(Spider):
 		}
 		return [200, "video/MP2T", action, ""]
 	
-	def filters():
+	def categories():
 		current_year = datetime.now().year
 		years = [{"n": str(year), "v": str(year)} for year in range(current_year, current_year - 12, -1)]
 		years.insert(0, {"n": "全部", "v": ""})
@@ -204,4 +205,5 @@ class Spider(Spider):
 			]
 		}
 
-		return [{key: [{"key": "Category", "name": "类型", "value": value}, {"key": "Year", "name": "年份", "value": years}] for key, value in categories.items()}]
+		filters = {key: [{"key": "Category", "name": "类型", "value": value}, {"key": "Year", "name": "年份", "value": years}] for key, value in categories.items()}
+		return json.dumps(filters)

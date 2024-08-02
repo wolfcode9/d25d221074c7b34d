@@ -4,9 +4,40 @@ import sys
 sys.path.append('..') 
 from base.spider import Spider
 import requests
+import datetime
 
 class Spider(Spider):
 	siteUrl = "https://www.yingshi.tv"
+
+	current_year = datetime.now().year
+    years = [{"n": f"{year}", "v": f"{year}"} for year in range(current_year, current_year - 13, -1)]
+    years.insert(0, {"n": "全部", "v": ""})
+
+    config = {
+        "player": {},
+        "filter": [
+            {
+                "key": "region",
+                "name": "地區",
+                "value": [
+                    {"n": "全部", "v": ""},
+                    {"n": "大陸", "v": "大陸"},
+                    {"n": "歐美", "v": "歐美"},
+                    {"n": "日本", "v": "日本"},
+                    {"n": "臺灣", "v": "臺灣"},
+                    {"n": "香港", "v": "香港"},
+                    {"n": "韓國", "v": "韓國"},
+                    {"n": "新馬泰", "v": "新馬泰"},
+                    {"n": "其他", "v": "其他"}
+                ]
+            },
+            {
+                "key": "year",
+                "name": "年份",
+                "value": years
+            }
+        ]
+    }
 
 	def getName(self):
 		return "影視"
