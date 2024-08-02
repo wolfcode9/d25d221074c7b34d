@@ -93,7 +93,7 @@ class Spider(Spider):
 		#key = hot:熱門  update:最近更新  release:最新上片
 		key = "hot"
 		if self.vip:
-			pagesize = 100
+			pagesize = 80
 			key = "release"
 			parent_category_ids = [108]
 		else:		
