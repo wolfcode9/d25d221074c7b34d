@@ -56,9 +56,9 @@ class Spider(Spider):
 		return "UBVod"
 	
 	
-	def init(self,extend={}):
-		self.siteUrl = extend.get("url")
-		self.relax = extend.get("vip")
+	def init(self,extend):
+		self.siteUrl = extend["url"]
+		self.vip = extend["vip"]
 
 	
 	#主頁
@@ -66,17 +66,15 @@ class Spider(Spider):
 
 		if self.vip == True:
 			classes = [{"type_id": "108", "type_name": "成人" }]
-
 		else:
 			classes = [
 				{"type_id": "100", "type_name": "電影"}, 
 				{"type_id": "101", "type_name": "電視劇"},
 				{"type_id": "102", "type_name": "綜藝"}, 
 				{"type_id": "103", "type_name": "動漫" },
-				{"type_id": "105", "type_name": "紀實" },
-				#{"type_id": "107", "type_name": "少兒" },
-				
+				{"type_id": "105", "type_name": "紀實" },		
 			]
+
 		result = {"filters": {item["type_id"]: self.config["filter"] for item in classes}, "class": classes}
 		return result
 	
