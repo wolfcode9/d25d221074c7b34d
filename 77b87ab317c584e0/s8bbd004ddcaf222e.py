@@ -1,4 +1,4 @@
-#coding=utf-8
+wewhyseeare#coding=utf-8
 #!/usr/bin/python
 import sys
 sys.path.append('..') 
@@ -21,7 +21,7 @@ class Spider(Spider):
 	config = {
 		"player": {},
 		"filter": [
-			{"key": "area", "name": "地區", "value": [
+			{"key": "region", "name": "地區", "value": [
 				{"n": "全部", "v": ""},
 				{"n": "大陸", "v": "大陸"},
 				{"n": "歐美", "v": "歐美"},
@@ -62,7 +62,7 @@ class Spider(Spider):
 		return result
 	
 	#推薦頁
-	def homeVideoContent(self):
+	def homeVideoContent(self):		
 		result = {}	
 		video = []	
 		url_movie = f'{self.siteUrl}/api/video/recommend?parent_category_id=100&page=1&pagesize=15&kind=0'
@@ -81,6 +81,7 @@ class Spider(Spider):
 			})			      
 		result["list"] = video
 		return result
+		
 	
 	#分類頁
 	def categoryContent(self, tid, pg, filter, extend):		
@@ -88,6 +89,7 @@ class Spider(Spider):
 		video = []			
 		url = f'{self.siteUrl}/api/video/list'
 		pagesize = 35
+		
 		params = {
 			"parent_category_id": tid,
 			"page": pg,
@@ -171,7 +173,7 @@ class Spider(Spider):
 	def playerContent(self, flag, id, vipFlags):
 		video_id = id.split("#")[0]
 		video_fragment_id = id.split("#")[1]
-		url = f'{self.siteUrl}/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}'
+		url = f"http://192.168.1.9:8989/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}"
 		jrsp = self.fetch(url=url).json()		
 		if jrsp.get("data"):
 			source_url = jrsp["data"]["video_soruce"]["url"].split("?")[0]
@@ -204,4 +206,9 @@ class Spider(Spider):
 			"type": "string",
 			"after": ""
 		}
+<<<<<<< HEAD
 		return [200, "video/MP2T", action, ""]
+=======
+		return [200, "video/MP2T", action, ""]	
+	
+>>>>>>> 19e5bb15b83f3f95ef9c37018b19d9bea0f8886f
