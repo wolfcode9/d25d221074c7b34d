@@ -116,7 +116,7 @@ class Spider(Spider):
 					response = future.result()
 					data = response.json()
 
-					if by == "hot":
+					if by == 0:
 						video_list.extend(data.get("video_hot_list", []))
 					else:
 						video_list.extend(data.get("video_latest_list", []))
