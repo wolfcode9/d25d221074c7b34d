@@ -52,10 +52,7 @@ categories = {
     ]
 }
 
-# Combine data
 filters = {key: [{"key": "Category", "name": "类型", "value": value}, {"key": "Year", "name": "年份", "value": years}] for key, value in categories.items()}
-
-# Convert to JSON
 
 class Spider(Spider):	
 	siteUrl = "https://m.mubai.link"		
@@ -75,7 +72,7 @@ class Spider(Spider):
 			{"type_id": "4", "type_name": "動漫" }
 		]
 		result['class'] = classes
-		result['filters'] =  filters
+		result['filters'] = filters
 		return result
 	
 	def homeVideoContent(self):		
