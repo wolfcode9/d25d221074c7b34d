@@ -39,6 +39,16 @@ class Spider(Spider):
 		]
 	}
 	
+	def vod_remark(self,vod={}):
+		parent_category_id = vod["parent_category_id"]
+		state = vod["state"]
+		last_fragment_symbol = vod["last_fragment_symbol"]
+		if parent_category_id in [100,107,108] :
+			remarks = ""
+		else:				
+			remarks = "{} {}集".format(state,last_fragment_symbol)
+		return remarks
+
 	#命名
 	def getName(self):
 		return "UBVod"
@@ -71,12 +81,12 @@ class Spider(Spider):
 			jrsp_tv = executor.submit(self.fetch, url_tv).result().json().get("video_hot_list")
 			vdata = (jrsp_movie or []) + (jrsp_tv or [])
 
-		for vod in vdata:			
+		for vod in vdata:
 			video.append({				
 				"vod_id": vod["id"],
 				"vod_name": vod["title"],
 				"vod_pic": vod["pic"],
-				"vod_remarks": vod["state"]				
+				"vod_remarks": self.vod_remark(vod)
 			})			      
 		result["list"] = video
 		
@@ -101,20 +111,11 @@ class Spider(Spider):
 		if jrsp.get("data"):
 			vdata = jrsp["data"]["video_list"]
 			for vod in vdata:
-				remarks = ""
-				parent_category_id = vod["parent_category_id"]
-				state = vod["state"]
-				last_fragment_symbol = vod["last_fragment_symbol"]
-				if parent_category_id in [100,107,108] :
-					remarks = ""
-				else:				
-					remarks = "{} {}集".format(state,last_fragment_symbol)
-
 				video.append({
 					"vod_id": vod["id"],
 					"vod_name": vod["title"],
 					"vod_pic": vod["pic"],
-					"vod_remarks": remarks
+					"vod_remarks": self.vod_remark(vod)
             	})
 			result["list"] = video
 			result["page"] = pg
@@ -164,21 +165,12 @@ class Spider(Spider):
 			vod_play_urls  = ""
 			for vf in jrsp.get("video_fragment_list"):
 				vod_play_urls += "{}${}_{}#".format(vf["symbol"], video_id, vf["id"])
-			
-			remarks = ""
-			parent_category_id = vod["parent_category_id"]
-			state = vod["state"]
-			last_fragment_symbol = vod["last_fragment_symbol"]	
-			if parent_category_id in  [100,107,108]:
-				remarks = ""
-			else:				
-				remarks = "{} {}集".format(state,last_fragment_symbol)
-
+				
 			video.append ({			
 				"type_name": "",
 				"vod_id": vod.get("id", ""),
 				"vod_name": vod.get("title", ""),		
-				"vod_remarks": remarks,
+				"vod_remarks": self.vod_remark(vod),
 				"vod_year": vod.get("year", ""),
 				"vod_area": vod.get("region", ""),
 				"vod_actor": vod.get("starring", ""),
