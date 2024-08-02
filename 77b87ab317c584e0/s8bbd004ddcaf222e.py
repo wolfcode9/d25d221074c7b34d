@@ -54,8 +54,10 @@ class Spider(Spider):
 	def getName(self):
 		return "UBVod"
 	
+	
 	def init(self,extend=""):
 		self.siteUrl = extend
+
 	
 	#主頁
 	def homeContent(self, filter):
@@ -152,9 +154,11 @@ class Spider(Spider):
 		
 		return result 
 	
+	
 	#搜索頁(舊)
 	def searchContent(self, key, quick):
-		return self.searchContentPage(key, quick, "1")		
+		return self.searchContentPage(key, quick, "1")
+	
 	
 	#搜索頁(新)
 	def searchContentPage(self, key, quick, pg):
@@ -186,7 +190,8 @@ class Spider(Spider):
 		except Exception as ex:
 			print(ex)		
 		
-		return result 
+		return result
+	
 	
 	#詳情頁
 	def detailContent(self, ids):
@@ -223,6 +228,7 @@ class Spider(Spider):
 			print(ex)
 
 		return result
+	
 
 	#播放頁
 	def playerContent(self, flag, id, vipFlags):
@@ -248,17 +254,21 @@ class Spider(Spider):
 
 		return result
 	
+	
 	#釋放資源
 	def destroy(self):
 		pass
+
 	
 	#視頻格式
 	def isVideoFormat(self, url):
 		pass
+
 	
 	#視頻檢測
 	def manualVideoCheck(self):
 		pass
+	
 	
 	#本地代理
 	def localProxy(self, param):
