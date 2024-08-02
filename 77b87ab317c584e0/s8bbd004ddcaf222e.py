@@ -38,11 +38,12 @@ class Spider(Spider):
 			]}
 		]
 	}
+
 	
 	def vod_remark(self,vod={}):
 		parent_category_id = vod.get(parent_category_id, "")
-		state = vod.get(state, "")	#更新狀態
-		last_fragment_symbol = vod.get("last_fragment_symbol") #級數
+		state = vod["state"]	#更新狀態
+		last_fragment_symbol = vod["last_fragment_symbol"] #級數
 		if parent_category_id in [101,102,103,105] :
 			remarks = "{} {}集".format(state,last_fragment_symbol)
 		else:
@@ -58,6 +59,7 @@ class Spider(Spider):
 	
 	#主頁
 	def homeContent(self, filter):
+
 		classes = [
 			{"type_id": "100", "type_name": "電影"}, 
 			{"type_id": "101", "type_name": "電視劇"},
@@ -70,11 +72,12 @@ class Spider(Spider):
 		result = {"filters": {item["type_id"]: self.config["filter"] for item in classes}, "class": classes}
 		return result
 	
+	
 	#推薦頁
 	def homeVideoContent(self):
 		result = {}
 		video = []		
-		vdata = []
+		video_list = []
 		pagesize = 10
 		parent_category_ids = [100, 101, 102, 103]
 		# 使用 ThreadPoolExecutor 進行並行請求
@@ -91,14 +94,13 @@ class Spider(Spider):
 				parent_category_id = future_to_category[future]
 				try:
 					response = future.result()
-					data = response.json()
-					video_hot_list = data.get("video_hot_list", [])
-					vdata.extend(video_hot_list)
+					data = response.json()				
+					video_list.extend(data.get("video_hot_list", []))
 				except Exception as ex:
 					print(ex)
 
 		# 構建最終的視頻列表
-		for vod in vdata:
+		for vod in video_list:
 			video.append({
 				"vod_id": vod["id"],
 				"vod_name": vod["title"],
