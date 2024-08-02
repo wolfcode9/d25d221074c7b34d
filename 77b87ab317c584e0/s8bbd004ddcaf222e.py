@@ -8,7 +8,8 @@ import datetime
 
 class Spider(Spider):
 	
-	siteUrl = "" 
+	siteUrl = ""
+	vip = False
 	header = {
 		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
 		"Referer":  siteUrl
@@ -55,22 +56,27 @@ class Spider(Spider):
 		return "UBVod"
 	
 	
-	def init(self,extend=""):
-		self.siteUrl = extend
+	def init(self,extend):
+		self.siteUrl = extend.get("url")
+		self.relax = extend.get("vip")
 
 	
 	#主頁
 	def homeContent(self, filter):
 
-		classes = [
-			{"type_id": "100", "type_name": "電影"}, 
-			{"type_id": "101", "type_name": "電視劇"},
-			{"type_id": "102", "type_name": "綜藝"}, 
-			{"type_id": "103", "type_name": "動漫" },
-			{"type_id": "105", "type_name": "紀實" },
-			#{"type_id": "107", "type_name": "少兒" },
-			{"type_id": "108", "type_name": "成人" },
-		]
+		if self.vip == True:
+			classes = [{"type_id": "108", "type_name": "成人" }]
+
+		else:
+			classes = [
+				{"type_id": "100", "type_name": "電影"}, 
+				{"type_id": "101", "type_name": "電視劇"},
+				{"type_id": "102", "type_name": "綜藝"}, 
+				{"type_id": "103", "type_name": "動漫" },
+				{"type_id": "105", "type_name": "紀實" },
+				#{"type_id": "107", "type_name": "少兒" },
+				
+			]
 		result = {"filters": {item["type_id"]: self.config["filter"] for item in classes}, "class": classes}
 		return result
 	
@@ -82,7 +88,11 @@ class Spider(Spider):
 		video = []		
 		video_list = []
 		pagesize = 10
-		parent_category_ids = [100, 101, 102, 103]
+		if self.vip == True:
+			pagesize = 40
+			parent_category_ids = [108]
+		else:		
+			parent_category_ids = [100, 101, 102, 103]
 		# 使用 ThreadPoolExecutor 進行並行請求
 		with concurrent.futures.ThreadPoolExecutor() as executor:
 			# 提交所有請求並創建 future-to-category 字典
