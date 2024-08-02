@@ -45,7 +45,7 @@ class Spider(Spider):
 		state = vod["state"]	#更新狀態
 		last_fragment_symbol = vod["last_fragment_symbol"] #級數
 		if parent_category_id in [101,102,103,105] :
-			remarks = "{} {}集".format(state,last_fragment_symbol)
+			remarks = f"{state} {last_fragment_symbol}集"
 		else:
 			remarks = ""		
 		return remarks
@@ -209,7 +209,7 @@ class Spider(Spider):
 			fragment_ids = data["video_fragment_list"]
 			vod_play_urls  = ""
 			for fragment_id in fragment_ids:
-				vod_play_urls += f"{fragment_id["symbol"]}${video_id}_{ fragment_id["id"]}#"
+				vod_play_urls += f"{fragment_id['symbol']}${video_id}_{fragment_id['id']}#"
 
 			video.append ({			
 				"type_name": "",
@@ -282,3 +282,7 @@ class Spider(Spider):
 			"after": ""
 		}
 		return [200, "video/MP2T", action, ""]
+	
+
+sp = Spider()
+print(sp.homeContent(None))
