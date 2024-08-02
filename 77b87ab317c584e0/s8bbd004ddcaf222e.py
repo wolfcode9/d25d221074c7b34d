@@ -208,9 +208,4 @@ class Spider(Spider):
 			"type": "string",
 			"after": ""
 		}
-<<<<<<< HEAD
 		return [200, "video/MP2T", action, ""]
-=======
-		return [200, "video/MP2T", action, ""]	
-	
->>>>>>> 19e5bb15b83f3f95ef9c37018b19d9bea0f8886f
