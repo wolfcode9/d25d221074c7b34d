@@ -1,4 +1,4 @@
-wewhyseeare#coding=utf-8
+#coding=utf-8
 #!/usr/bin/python
 import sys
 sys.path.append('..') 
