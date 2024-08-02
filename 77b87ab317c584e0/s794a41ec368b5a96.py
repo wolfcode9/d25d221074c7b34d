@@ -8,8 +8,6 @@ import re
 import json
 from datetime import datetime
 
-
-
 current_year = datetime.now().year
 years = [{"n": str(year), "v": str(year)} for year in range(current_year, current_year - 12, -1)]
 years.insert(0, {"n": "全部", "v": ""})
@@ -71,8 +69,7 @@ class Spider(Spider):
 			{"type_id": "4", "type_name": "動漫" }
 		]
 		result['class'] = classes
-		if self.extend:	
-			result['filters'] =  filters
+		result['filters'] =  filters
 		return result
 	
 	def homeVideoContent(self):		
