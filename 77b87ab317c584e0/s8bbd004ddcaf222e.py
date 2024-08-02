@@ -240,9 +240,8 @@ class Spider(Spider):
 
 		try:
 			response = self.fetch(url=url)
-			data = response.json()
-			data = data["data"]
-			video_url = jrsp["data"]["video_soruce"]["url"].split("?")[0]
+			data = response.json()		
+			video_url = data["data"]["video_soruce"]["url"].split("?")[0]
 			result = {
 				"parse": "0",
 				"playUrl": "",
