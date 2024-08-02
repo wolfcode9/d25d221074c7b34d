@@ -105,10 +105,10 @@ class Spider(Spider):
 				parent_category_id = vod["parent_category_id"]
 				state = vod["state"]
 				last_fragment_symbol = vod["last_fragment_symbol"]
-				if parent_category_id in ["100","107","108"] :
+				if parent_category_id in [100,107,108] :
 					remarks = ""
 				else:				
-					remarks = "{} 共{}集".format(state,last_fragment_symbol)
+					remarks = "{} {}集".format(state,last_fragment_symbol)
 
 				video.append({
 					"vod_id": vod["id"],
@@ -169,10 +169,10 @@ class Spider(Spider):
 			parent_category_id = vod["parent_category_id"]
 			state = vod["state"]
 			last_fragment_symbol = vod["last_fragment_symbol"]	
-			if parent_category_id in  ["100","107","108"]:
+			if parent_category_id in  [100,107,108]:
 				remarks = ""
 			else:				
-				remarks = "{} 共{}集".format(state,last_fragment_symbol)
+				remarks = "{} {}集".format(state,last_fragment_symbol)
 
 			video.append ({			
 				"type_name": "",
