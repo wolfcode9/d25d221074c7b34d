@@ -1,25 +1,23 @@
 #coding=utf-8
 #!/usr/bin/python
 import sys
-import json
 sys.path.append('..') 
 from base.spider import Spider
 import concurrent.futures
-import json
 import datetime
 
 class Spider(Spider):
 	
-	siteUrl = "http://210.61.186.128:8989"
+	siteUrl = "http://192.168.1.9:8989" #"http://210.61.186.128:8989"
 	header = {
 		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Referer":  siteUrl
 	}
 
-	current_year = datetime.datetime.now().year
-	# 設置年份範圍
+	# 設置年份範圍	
+	current_year = datetime.datetime.now().year 
 	years = [{"n": f"{year}", "v": f"{year}"} for year in range(current_year, current_year - 12, -1)]
-	# 配置字典
+	#
 	config = {
 		"player": {},
 		"filter": [
@@ -40,15 +38,17 @@ class Spider(Spider):
 			]}
 		]
 	}
+	
 	#命名
 	def getName(self):
 		return "UBVod"
 	
 	def init(self,extend=""):
-		self.siteUrl = extend
+		self.extend = extend		
+		print("============{0}============".format(extend))		
 	
 	#主頁
-	def homeContent(self,filter):
+	def homeContent(self, filter):
 		classes = [
 			{"type_id": "100", "type_name": "電影"}, 
 			{"type_id": "101", "type_name": "電視劇"},
@@ -58,66 +58,54 @@ class Spider(Spider):
 			{"type_id": "107", "type_name": "少兒" },
 			{"type_id": "108", "type_name": "成人" },
 		]
-		result = {"filters": {},"class":classes}
-		if filter:
-			for item in classes:    
-				result["filters"][item["type_id"]] = self.config["filter"]
+		result = {"filters": {item["type_id"]: self.config["filter"] for item in classes}, "class": classes}
 		return result
 	
 	#推薦頁
 	def homeVideoContent(self):
 		result = {}	
-		vod = []	
-		url_movie = f"{self.siteUrl}/api/video/recommend?parent_category_id=100&page=1&pagesize=1&kind=0"
-		url_tv = f"{self.siteUrl}/api/video/recommend?parent_category_id=101&page=1&&pagesize=1&kind=0"
-		with concurrent.futures.ThreadPoolExecutor() as executor:					
-			result_movie = executor.submit(self.fetch,url_movie).result().json().get("video_hot_list")
-			result_tv = executor.submit(self.fetch,url_tv).result().json().get("video_hot_list")
-			result = result_movie + result_tv
+		video = []	
+		url_movie = f'{self.siteUrl}/api/video/recommend?parent_category_id=100&page=1&pagesize=15&kind=0'
+		url_tv = f'{self.siteUrl}/api/video/recommend?parent_category_id=101&page=1&&pagesize=15&kind=0'
+		with concurrent.futures.ThreadPoolExecutor() as executor:                    
+			jrsp_movie = executor.submit(self.fetch, url_movie).result().json().get("video_hot_list")
+			jrsp_tv = executor.submit(self.fetch, url_tv).result().json().get("video_hot_list")
+			vdata = (jrsp_movie or []) + (jrsp_tv or [])
 
-		for v in result:			
-			vod.append({
-				"type_name": "",
-				"vod_id": v["id"],
-				"vod_name": v["title"],
-				"vod_pic": v["pic"],
-				"vod_remarks": v["description"],
-				"vod_year": v["year"],
-				"vod_area": v["region"],
-				"vod_director": v["director"],
-				"vod_actor": v["starring"],
-				"vod_play_from": "UBVod",
-				"vod_play_url": "",
-				"vod_content": "",				
-				"vod_tag": v["state"]
+		for vod in vdata:			
+			video.append({				
+				"vod_id": vod["id"],
+				"vod_name": vod["title"],
+				"vod_pic": vod["pic"],
+				"vod_remarks": vod["state"]				
 			})			      
-		result['list'] = vod
+		result["list"] = video
 		return result
 	
 	#分類頁
-	def categoryContent(self,tid,pg,filter,extend):		
+	def categoryContent(self, tid, pg, filter, extend):		
 		result = {}	
-		vod = []			
-		url = f"{self.siteUrl}/api/video/list"
+		video = []			
+		url = f'{self.siteUrl}/api/video/list'
 		pagesize = 35
 		params = {
 			"parent_category_id": tid,
 			"page": pg,
 			"region": extend.get("region", ""),
 			"year": extend.get("year", ""),
-			"pagesize": extend.get("pagesize",pagesize)			
+			"pagesize": pagesize			
 		}		
 		jrsp = self.fetch(url=url,params=params).json()
 		if jrsp.get("data"):
-			video_list = jrsp["data"]["video_list"]
-			for v in video_list:
-				vod.append({
-					"vod_id": v["id"],
-					"vod_name": v["title"],
-					"vod_pic": v["pic"],
-					"vod_remarks": v["description"]
+			vdata = jrsp["data"]["video_list"]
+			for vod in vdata:
+				video.append({
+					"vod_id": vod["id"],
+					"vod_name": vod["title"],
+					"vod_pic": vod["pic"],
+					"vod_remarks": vod["state"]
             	})
-			result["list"] = vod
+			result["list"] = video
 			result["page"] = pg
 			result["pagecount"] = 9999
 			result["limit"] = pagesize
@@ -125,9 +113,9 @@ class Spider(Spider):
 		return result 
 	
 	#詳情頁
-	def detailContent(self, array):		
-		result = {}        
-		video_id = array[0]
+	def detailContent(self, ids):		
+		result = {}
+		video_id = ids[0]
 		url = f'{self.siteUrl}/api/video/info?video_id={video_id}'
 		jrsp = self.fetch(url=url).json()		
 		if jrsp.get("video"):
@@ -136,30 +124,51 @@ class Spider(Spider):
 			for vf in jrsp.get("video_fragment_list"):
 				vod_play_urls.append(f'{vf["symbol"]}${str(video_id) + "#" + str(vf["id"])}')
 
-			result['list'] = {
+			result["list"] = [{
 				"type_name": "",
-				"vod_id": vod.get('id', ''),
-				"vod_name": vod.get('title', ''),
-				"vod_pic": vod.get('pic', ''),
-				"vod_remarks": vod.get('description', ''),                
-				"vod_year": vod.get('year', ''),
-				"vod_area": vod.get('region', ''),
-				"vod_director": vod.get('director', ''),                
-				"vod_actor": vod.get('starring', ''),                
+				"vod_id": vod.get("id", ""),
+				"vod_name": vod.get("title", ""),		
+				"vod_remarks": vod.get("description", ""),
+				"vod_year": vod.get("year", ""),
+				"vod_area": vod.get("region", ""),
+				"vod_actor": vod.get("starring", ""),
+				"vod_director": vod.get("director", ""),
+				"vod_content": "",	
 				"vod_play_from": "UBVod",
-				"vod_play_url": vod_play_urls,
-				"vod_content": "",                
-				"vod_tag": vod.get('state', '')
-			} 			
+				"vod_play_url": vod_play_urls
+			}]
 		return result
 	
-	#搜索頁
-	def searchContent(self,key,quick):
-		result = {}
-		return result
+	#搜索頁(舊)
+	def searchContent(self, key, quick):
+		return self.searchContentPage(key, quick, "1")		
 	
+	#搜索頁(新)
+	def searchContentPage(self, key, quick, pg):
+		result = {}	
+		video = []			
+		url = f'{self.siteUrl}/api/video/list'
+		pagesize = 35
+		params = {
+			"keyword": key,
+			"page": 1,			
+			"pagesize": pagesize			
+		}		
+		jrsp = self.fetch(url=url,params=params).json()
+		if jrsp.get("data"):
+			vdata = jrsp["data"]["video_list"]
+			for vod in vdata:
+				video.append({
+					"vod_id": vod["id"],
+					"vod_name": vod["title"],
+					"vod_pic": vod["pic"],
+					"vod_remarks": vod["state"]
+            	})
+			result["list"] = video
+		return result 
+
 	#播放頁
-	def playerContent(self,flag,id,vipFlags):		
+	def playerContent(self, flag, id, vipFlags):
 		video_id = id.split("#")[0]
 		video_fragment_id = id.split("#")[1]
 		url = f'{self.siteUrl}/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}'
@@ -167,15 +176,19 @@ class Spider(Spider):
 		if jrsp.get("data"):
 			source_url = jrsp["data"]["video_soruce"]["url"].split("?")[0]
 			result = {
-				'parse': '0',
-				'playUrl': '',
-				'url': source_url,
-				'header': ''
+				"parse": "0",
+				"playUrl": "",
+				"url": source_url,
+				"header": ""
 			}
 		return result
 	
+	#釋放資源
+	def destroy(self):
+		pass
+	
 	#視頻格式
-	def isVideoFormat(self,url):
+	def isVideoFormat(self, url):
 		pass
 	
 	#視頻檢測
@@ -183,18 +196,12 @@ class Spider(Spider):
 		pass
 	
 	#本地代理
-	def localProxy(self,param):
+	def localProxy(self, param):
 		action = {
-			'url':'',
-			'header':'',
-			'param':'',
-			'type':'string',
-			'after':''
+			"url": "",
+			"header": "",
+			"param": "",
+			"type": "string",
+			"after": ""
 		}
-		return [200, "video/MP2T", action, ""]	
-	
-
-#sp = Spider()
-#print(sp.categoryContent(101,1,False,{"pagesize":1}))
-#print(sp.detailContent(['75983']))
-#print(sp.fetch_video_source(video_id=75983,video_fragment=470610))
+		return [200, "video/MP2T", action, ""]
