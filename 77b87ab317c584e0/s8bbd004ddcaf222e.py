@@ -156,7 +156,7 @@ class Spider(Spider):
 			video = []
 			vod_play_urls = []
 			for vf in jrsp.get("video_fragment_list"):
-				vod_play_urls.append(f'{vf["symbol"]}${str(video_id) + "#" + str(vf["id"])}')
+				vod_play_urls.append('#'.join([vf["symbol"] + '$' + str(video_id) + "@" + str(vf["id"])]))				
 
 			video.append ({			
 				"type_name": "",
@@ -169,10 +169,10 @@ class Spider(Spider):
 				"vod_director": vod.get("director", ""),
 				"vod_content": "",	
 				"vod_play_from": "UBVod",
-				"vod_play_url": vod_play_urls
+				"vod_play_url": '#'.join(vod_play_urls)
 			})
 			result['list'] = video
-			
+
 		return result
 
 	#播放頁
@@ -184,8 +184,8 @@ class Spider(Spider):
 			"header": self.header
 		}
 		'''
-		video_id = id.split("#")[0]
-		video_fragment_id = id.split("#")[1]
+		video_id = id.split("@")[0]
+		video_fragment_id = id.split("@")[1]
 		url = f"http://192.168.1.9:8989/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}"
 		jrsp = self.fetch(url=url).json()		
 		if jrsp.get("data"):
