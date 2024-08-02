@@ -10,8 +10,8 @@ class Spider(Spider):
 	
 	siteUrl = "http://210.61.186.128:8989" 
 	header = {
-		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Referer":  siteUrl
+		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        #,"Referer":  siteUrl
 	}
 
 	# 設置年份範圍	
@@ -89,7 +89,7 @@ class Spider(Spider):
 		result = {}	
 		video = []			
 		url = "{}/api/video/list".format(self.siteUrl)		
-		pagesize = 35
+		pagesize = 50
 		
 		params = {
 			"parent_category_id": tid,
@@ -167,7 +167,7 @@ class Spider(Spider):
 				"vod_actor": vod.get("starring", ""),
 				"vod_director": vod.get("director", ""),
 				"vod_content": "",	
-				"vod_play_from": "UBVod",
+				"vod_play_from": "安博",
 				"vod_play_url": vod_play_urls.strip('#')
 			})
 			result['list'] = video
@@ -182,11 +182,11 @@ class Spider(Spider):
 		url = "{}/api/video/source?video_id={}&video_fragment_id={}".format(self.siteUrl,video_id,video_fragment_id)
 		jrsp = self.fetch(url=url).json()		
 		if jrsp.get("data"):
-			source_url = jrsp["data"]["video_soruce"]["url"].split("?")[0]
+			video_url = jrsp["data"]["video_soruce"]["url"].split("?")[0]
 			result = {
 				"parse": "0",
 				"playUrl": "",
-				"url": source_url,
+				"url": video_url,
 				"header": self.header
 			}
 	
