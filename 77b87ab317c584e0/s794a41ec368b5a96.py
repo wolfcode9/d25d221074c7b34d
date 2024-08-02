@@ -57,7 +57,7 @@ class Spider(Spider):
 	def getName(self):
 		return "慕白"
 	
-	def init(self,extend=""):
+	def init(self,extend):
 		self.extend = extend
 		
 	def homeContent(self,filter):		
