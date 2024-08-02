@@ -41,7 +41,7 @@ class Spider(Spider):
 
 	
 	def vod_remark(self,vod={}):
-		parent_category_id = vod.get(parent_category_id, "")
+		parent_category_id = vod["parent_category_id"]
 		state = vod["state"]	#更新狀態
 		last_fragment_symbol = vod["last_fragment_symbol"] #級數
 		if parent_category_id in [101,102,103,105] :
