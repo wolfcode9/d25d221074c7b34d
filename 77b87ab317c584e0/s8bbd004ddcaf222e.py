@@ -64,6 +64,7 @@ class Spider(Spider):
 	#推薦頁
 	def homeVideoContent(self):		
 		result = {}	
+		'''
 		video = []	
 		url_movie = f'{self.siteUrl}/api/video/recommend?parent_category_id=100&page=1&pagesize=15&kind=0'
 		url_tv = f'{self.siteUrl}/api/video/recommend?parent_category_id=101&page=1&&pagesize=15&kind=0'
@@ -80,6 +81,7 @@ class Spider(Spider):
 				"vod_remarks": vod["state"]				
 			})			      
 		result["list"] = video
+		'''
 		return result
 		
 	
