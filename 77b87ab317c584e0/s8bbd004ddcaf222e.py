@@ -5,6 +5,7 @@ sys.path.append('..')
 from base.spider import Spider
 import concurrent.futures
 import datetime
+import json
 
 class Spider(Spider):
 	
@@ -57,9 +58,13 @@ class Spider(Spider):
 	
 	
 	def init(self,extend):
-		self.siteUrl = extend["url"]
-		self.vip = extend["vip"]
+		try:
+			data = json.loads(extend)
+			self.siteUrl = data.get("url")
+			self.vip = data.get("vip")
 
+		except:
+			pass
 	
 	#主頁
 	def homeContent(self, filter):
