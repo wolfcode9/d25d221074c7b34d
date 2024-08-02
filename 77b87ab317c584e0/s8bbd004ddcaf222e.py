@@ -9,7 +9,7 @@ import datetime
 class Spider(Spider):
 	
 	siteUrl = ""
-	vip = False
+	vip = 0
 	header = {
 		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
 		"Referer":  siteUrl
@@ -64,7 +64,7 @@ class Spider(Spider):
 	#主頁
 	def homeContent(self, filter):
 
-		if self.vip == True:
+		if self.vip:
 			classes = [{"type_id": "108", "type_name": "成人" }]
 		else:
 			classes = [
@@ -86,7 +86,7 @@ class Spider(Spider):
 		video = []		
 		video_list = []
 		pagesize = 10
-		if self.vip == True:
+		if self.vip:
 			pagesize = 40
 			parent_category_ids = [108]
 		else:		
@@ -288,7 +288,3 @@ class Spider(Spider):
 			"after": ""
 		}
 		return [200, "video/MP2T", action, ""]
-	
-
-sp = Spider()
-print(sp.homeContent(None))
