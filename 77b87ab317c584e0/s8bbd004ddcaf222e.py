@@ -174,10 +174,10 @@ class Spider(Spider):
 	#播放頁
 	def playerContent(self, flag, id, vipFlags):
 		result = {
-				"parse": "0",
-				"playUrl": "",
-				"url": id,
-				"header": ""
+			"parse": "0",
+			"playUrl": "",
+			"url": "https://32-cdn.livecdn.me/content/dsj-shcm-20240731-shd-01.mp4/index.m3u8",
+			"header": ""
 		}
 		'''
 		video_id = id.split("#")[0]
