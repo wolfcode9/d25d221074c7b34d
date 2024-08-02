@@ -63,7 +63,7 @@ class Spider(Spider):
 			self.siteUrl = data["url"]
 			self.vip = data["vip"]
 		else:
-			self.siteUrl = "http://210.61.186.128:8989"
+			pass #self.siteUrl = "http://210.61.186.128:8989"
 
 	
 	#主頁
