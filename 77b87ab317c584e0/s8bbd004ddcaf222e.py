@@ -75,7 +75,7 @@ class Spider(Spider):
 	def homeVideoContent(self):
 		result = {}
 		video = []
-		parent_category_ids = [100, 101, 102, 103]
+		parent_category_ids = [100, 101, 102, 103,108]
 		vdata = []
 		
 		with concurrent.futures.ThreadPoolExecutor() as executor:
