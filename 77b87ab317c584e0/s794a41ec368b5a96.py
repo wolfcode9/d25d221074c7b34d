@@ -9,6 +9,50 @@ import json
 from datetime import datetime
 
 
+
+current_year = datetime.now().year
+years = [{"n": str(year), "v": str(year)} for year in range(current_year, current_year - 12, -1)]
+years.insert(0, {"n": "全部", "v": ""})
+categories = {
+	"1": [
+		{"n": "全部", "v": ""},
+		{"n": "动作片", "v": "6"},
+		{"n": "喜剧片", "v": "7"},
+		{"n": "爱情片", "v": "8"},
+		{"n": "科幻片", "v": "9"},
+		{"n": "恐怖片", "v": "10"},
+		{"n": "剧情片", "v": "11"},
+		{"n": "战争片", "v": "12"},
+		{"n": "记录片", "v": "20"},
+		{"n": "预告片", "v": "45"}
+	],
+	"2": [
+		{"n": "全部", "v": ""},
+		{"n": "大陆", "v": "13"},
+		{"n": "台湾", "v": "21"},
+		{"n": "韩国", "v": "15"},
+		{"n": "日本", "v": "22"},
+		{"n": "欧美", "v": "16"}
+	],
+	"3": [
+		{"n": "全部", "v": ""},
+		{"n": "大陆", "v": "25"},
+		{"n": "台湾", "v": "26"},
+		{"n": "日韩", "v": "27"},
+		{"n": "欧美", "v": "28"}
+	],
+	"4": [
+		{"n": "全部", "v": ""},
+		{"n": "大陆", "v": "29"},
+		{"n": "日韩", "v": "30"},
+		{"n": "台湾", "v": "32"},
+		{"n": "欧美", "v": "31"}
+	]
+}
+
+filters = {key: [{"key": "Category", "name": "类型", "value": value}, {"key": "Year", "name": "年份", "value": years}] for key, value in categories.items()}
+
+
 class Spider(Spider):	
 	siteUrl = "https://m.mubai.link"		
 
@@ -27,8 +71,8 @@ class Spider(Spider):
 			{"type_id": "4", "type_name": "動漫" }
 		]
 		result['class'] = classes
-		result['filters'] =  self.categories()
-
+		if self.extend:	
+			result['filters'] =  filters
 		return result
 	
 	def homeVideoContent(self):		
@@ -163,47 +207,3 @@ class Spider(Spider):
 			'after':''
 		}
 		return [200, "video/MP2T", action, ""]
-	
-	def categories():
-		current_year = datetime.now().year
-		years = [{"n": str(year), "v": str(year)} for year in range(current_year, current_year - 12, -1)]
-		years.insert(0, {"n": "全部", "v": ""})
-		categories = {
-			"1": [
-				{"n": "全部", "v": ""},
-				{"n": "动作片", "v": "6"},
-				{"n": "喜剧片", "v": "7"},
-				{"n": "爱情片", "v": "8"},
-				{"n": "科幻片", "v": "9"},
-				{"n": "恐怖片", "v": "10"},
-				{"n": "剧情片", "v": "11"},
-				{"n": "战争片", "v": "12"},
-				{"n": "记录片", "v": "20"},
-				{"n": "预告片", "v": "45"}
-			],
-			"2": [
-				{"n": "全部", "v": ""},
-				{"n": "大陆", "v": "13"},
-				{"n": "台湾", "v": "21"},
-				{"n": "韩国", "v": "15"},
-				{"n": "日本", "v": "22"},
-				{"n": "欧美", "v": "16"}
-			],
-			"3": [
-				{"n": "全部", "v": ""},
-				{"n": "大陆", "v": "25"},
-				{"n": "台湾", "v": "26"},
-				{"n": "日韩", "v": "27"},
-				{"n": "欧美", "v": "28"}
-			],
-			"4": [
-				{"n": "全部", "v": ""},
-				{"n": "大陆", "v": "29"},
-				{"n": "日韩", "v": "30"},
-				{"n": "台湾", "v": "32"},
-				{"n": "欧美", "v": "31"}
-			]
-		}
-
-		filters = {key: [{"key": "Category", "name": "类型", "value": value}, {"key": "Year", "name": "年份", "value": years}] for key, value in categories.items()}
-		return json.dumps(filters, ensure_ascii=False, indent=2)
