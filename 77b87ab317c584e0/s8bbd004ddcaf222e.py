@@ -10,8 +10,8 @@ class Spider(Spider):
 	
 	siteUrl = "" 
 	header = {
-		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        #,"Referer":  siteUrl
+		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+		"Referer":  siteUrl
 	}
 
 	# 設置年份範圍	
@@ -47,6 +47,7 @@ class Spider(Spider):
 			remarks = ""
 		else:				
 			remarks = "{} {}集".format(state,last_fragment_symbol)
+		
 		return remarks
 
 	#命名
@@ -71,23 +72,33 @@ class Spider(Spider):
 		return result
 	
 	#推薦頁
-	def homeVideoContent(self):		
-		result = {}			
-		video = []			
-		url_movie = "{}/api/video/recommend?parent_category_id=100&page=1&pagesize=20&kind=0".format(self.siteUrl)
-		url_tv = "{}/api/video/recommend?parent_category_id=101&page=1&&pagesize=20&kind=0".format(self.siteUrl)
-		with concurrent.futures.ThreadPoolExecutor() as executor:                    
-			jrsp_movie = executor.submit(self.fetch, url_movie).result().json().get("video_hot_list")
-			jrsp_tv = executor.submit(self.fetch, url_tv).result().json().get("video_hot_list")
-			vdata = (jrsp_movie or []) + (jrsp_tv or [])
-
+	def homeVideoContent(self):
+		result = {}
+		video = []
+		parent_category_ids = [100, 101, 102, 103]
+		vdata = []
+		
+		with concurrent.futures.ThreadPoolExecutor() as executor:
+			future_to_category = {
+				executor.submit(self.fetch, f"{self.siteUrl}/api/video/recommend?parent_category_id={parent_category_id}&page=1&pagesize=10&kind=0"): 
+				parent_category_id for parent_category_id in parent_category_ids
+			}
+			
+			for future in concurrent.futures.as_completed(future_to_category):
+				parent_category_id = future_to_category[future]
+				response = future.result()
+				data = response.json()
+				video_hot_list = data.get("video_hot_list", [])
+				vdata.extend(video_hot_list)
+		
 		for vod in vdata:
-			video.append({				
+			video.append({
 				"vod_id": vod["id"],
 				"vod_name": vod["title"],
 				"vod_pic": vod["pic"],
 				"vod_remarks": self.vod_remark(vod)
-			})			      
+			})
+		
 		result["list"] = video
 		
 		return result
@@ -147,7 +158,7 @@ class Spider(Spider):
 					"vod_id": vod["id"],
 					"vod_name": vod["title"],
 					"vod_pic": vod["pic"],
-					"vod_remarks": vod["state"]
+					"vod_remarks": self.vod_remark(vod)
             	})
 			result["list"] = video
 		return result 
