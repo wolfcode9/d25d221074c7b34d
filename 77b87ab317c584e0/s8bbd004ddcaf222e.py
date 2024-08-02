@@ -116,33 +116,6 @@ class Spider(Spider):
 			result["total"] = 999999
 		return result 
 	
-	#詳情頁
-	def detailContent(self, ids):
-		result = {}
-		video_id = ids[0]
-		url = f'{self.siteUrl}/api/video/info?video_id={video_id}'
-		jrsp = self.fetch(url=url).json()		
-		if jrsp.get("video"):
-			vod = jrsp["video"]
-			vod_play_urls = []
-			for vf in jrsp.get("video_fragment_list"):
-				vod_play_urls.append(f'{vf["symbol"]}${str(video_id) + "#" + str(vf["id"])}')
-
-			result["list"] = [{
-				"type_name": "",
-				"vod_id": vod.get("id", ""),
-				"vod_name": vod.get("title", ""),		
-				"vod_remarks": vod.get("description", ""),
-				"vod_year": vod.get("year", ""),
-				"vod_area": vod.get("region", ""),
-				"vod_actor": vod.get("starring", ""),
-				"vod_director": vod.get("director", ""),
-				"vod_content": "",	
-				"vod_play_from": "UBVod",
-				"vod_play_url": vod_play_urls
-			}]
-		return result
-	
 	#搜索頁(舊)
 	def searchContent(self, key, quick):
 		return self.searchContentPage(key, quick, "1")		
@@ -170,14 +143,42 @@ class Spider(Spider):
             	})
 			result["list"] = video
 		return result 
+	
+	#詳情頁
+	def detailContent(self, ids):
+		result = {}
+		video_id = ids[0]
+		url = f'{self.siteUrl}/api/video/info?video_id={video_id}'
+		jrsp = self.fetch(url=url).json()
+		
+		if jrsp.get("video"):
+			vod = jrsp["video"]
+			vod_play_urls = []
+			for vf in jrsp.get("video_fragment_list"):
+				vod_play_urls.append(f'{vf["symbol"]}${str(video_id) + "#" + str(vf["id"])}')
+
+		result["list"] = [{
+			"type_name": "",
+			"vod_id": vod.get("id", ""),
+			"vod_name": vod.get("title", ""),		
+			"vod_remarks": vod.get("description", ""),
+			"vod_year": vod.get("year", ""),
+			"vod_area": vod.get("region", ""),
+			"vod_actor": vod.get("starring", ""),
+			"vod_director": vod.get("director", ""),
+			"vod_content": "",	
+			"vod_play_from": "UBVod",
+				"vod_play_url": vod_play_urls
+		}]		
+		return result
 
 	#播放頁
 	def playerContent(self, flag, id, vipFlags):
 		result = {
-			"parse": "0",
+			"parse": 0,
 			"playUrl": "",
 			"url": "https://32-cdn.livecdn.me/content/dsj-shcm-20240731-shd-01.mp4/index.m3u8",
-			"header": ""
+			"header": self.header
 		}
 		'''
 		video_id = id.split("#")[0]
