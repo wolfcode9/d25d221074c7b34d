@@ -34,7 +34,9 @@
       "name": "UBVod",
       "type": 3,      
       "api": "https://raw.githubusercontent.com/wolfcode9/d25d221074c7b34d/main/77b87ab317c584e0/s8bbd004ddcaf222e.py",
-      "timeout": 60      
+      "timeout": 60,
+      "searchable": 0,
+      "changeable": 0
     },   
     {
       "key": "荐片",
