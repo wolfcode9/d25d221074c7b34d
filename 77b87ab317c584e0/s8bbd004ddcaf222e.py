@@ -150,7 +150,7 @@ class Spider(Spider):
 		video_id = ids[0]
 		url = f'{self.siteUrl}/api/video/info?video_id={video_id}'
 		jrsp = self.fetch(url=url).json()
-		
+
 		if jrsp.get("video"):
 			vod = jrsp["video"]
 			vod_play_urls = []
@@ -168,7 +168,7 @@ class Spider(Spider):
 			"vod_director": vod.get("director", ""),
 			"vod_content": "",	
 			"vod_play_from": "UBVod",
-				"vod_play_url": vod_play_urls
+			"vod_play_url": vod_play_urls
 		}]		
 		return result
 
