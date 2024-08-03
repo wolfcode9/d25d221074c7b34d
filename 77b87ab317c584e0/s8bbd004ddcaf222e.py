@@ -11,7 +11,7 @@ class Spider(Spider):
 	
 	siteUrl = ""
 	headers = {}
-	headers["User-Agent"] = "okhttp/3.12.0"
+	headers["User-Agent"] = "ExoSourceManager/1.0.3 (Linux;Android 10) ExoPlayerLib/2.11.3" #"okhttp/3.12.0"
 	#headers["Referer"] = siteUrl
 
 	# 設置年份範圍	
