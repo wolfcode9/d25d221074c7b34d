@@ -11,8 +11,8 @@ class Spider(Spider):
 	
 	siteUrl = ""
 	header = {
-		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-		"Referer":  siteUrl
+		"user-agent": "okhttp/3.12.0",
+		#"Referer":  siteUrl
 	}
 
 	# 設置年份範圍	
@@ -155,18 +155,22 @@ class Spider(Spider):
 		vod_id = ids[0]
 		vod_fragment_id = ids[1]
 		url = f"{self.siteUrl}/api/vod/source?vod_id={vod_id}&vod_fragment_id={vod_fragment_id}"
-
+		vod_url = ""
 		try:
 			response = self.fetch(url=url)
 			vod_url = response.text
 		except Exception as ex:
 			print(ex)
 
+		headers  = {}
+		headers["User-Agent"] =  "okhttp/3.12.0"
+		headers["host"] = f"{vod_url.split('//')[1].split('/')[0]}"		
+		
 		result = {
 			"parse": "0",
 			"playUrl": "",
 			"url": vod_url,
-			"header": ""
+			"header": headers
 		}
 		return result
 	
