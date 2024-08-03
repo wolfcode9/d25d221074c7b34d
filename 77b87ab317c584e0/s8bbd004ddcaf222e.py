@@ -171,11 +171,16 @@ class Spider(Spider):
 		except Exception as ex:
 			print(ex)
 		
-		return result 
+		return result	
 	
-	
-	#搜索頁
+	#搜索頁1
 	def searchContent(self, key, quick):
+		result = {}	
+		result = self.searchContentPage(key=key, quick=quick)
+		return result
+	
+	#搜索頁2
+	def searchContentPage(self, key, quick, pg="1"):
 		result = {}	
 		video = []
 		pagesize = 35
@@ -203,12 +208,8 @@ class Spider(Spider):
 
 		except Exception as ex:
 			print(ex)		
-		
+
 		return result
-	
-	
-	def searchContentPage(self, key, quick, pg):
-		pass
 
 	
 	#詳情頁
