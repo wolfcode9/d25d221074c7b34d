@@ -175,9 +175,9 @@ class Spider(Spider):
 	
 	
 	#搜索頁
-	def searchContent(self, key, quick, pg="1"):
+	def searchContent(self, key, quick):
 		result = {}	
-		video = []		
+		video = []
 		pagesize = 35
 		url = f"{self.siteUrl}/api/video/list"
 
@@ -206,6 +206,10 @@ class Spider(Spider):
 		
 		return result
 	
+	
+	def searchContentPage(self, key, quick, pg):
+		pass
+
 	
 	#詳情頁
 	def detailContent(self, ids):
