@@ -18,18 +18,6 @@
       "filterable": 0
     },
     {
-      "key": "18AV",
-      "name": "💕18AV",
-      "type": 3,
-      "api": "csp_Eighteen",
-      "searchable": 1,
-      "recordable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.485
-      }
-    },
-    {
       "key": "Jable",
       "name": "💕Jable",
       "type": 3,

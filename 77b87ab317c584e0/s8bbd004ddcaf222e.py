@@ -90,7 +90,7 @@ class Spider(Spider):
 		video = []		
 		video_list = []
 		
-		by = 2 #key = 0:熱門  1:最近更新  2:最新上映
+		by = 0 #key = 0:熱門  1:最近更新  2:最新上映
 
 		if self.vip:
 			pagesize = 100			
@@ -175,7 +175,7 @@ class Spider(Spider):
 	
 	
 	#搜索頁
-	def searchContent(self, key, quick , pg="1"):
+	def searchContent(self, key, quick, pg="1"):
 		result = {}	
 		video = []		
 		pagesize = 35
@@ -183,7 +183,7 @@ class Spider(Spider):
 
 		params = {
 			"keyword": key,
-			"page": 1,			
+			"page": 1,
 			"pagesize": pagesize			
 		}
 		try:
