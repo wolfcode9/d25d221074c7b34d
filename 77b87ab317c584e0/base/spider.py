@@ -36,7 +36,10 @@ class Spider(metaclass=ABCMeta):
     def detailContent(self, ids):
         pass
 
-    def searchContent(self, key, quick, pg="1"):
+    def searchContent(self, key, quick):
+        pass
+
+    def searchContentPage(self, key, quick, pg="1"):
         pass
 
     def playerContent(self, flag, id, vipFlags):
