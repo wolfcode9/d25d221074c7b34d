@@ -158,7 +158,7 @@ class Spider(Spider):
 
 		try:
 			response = self.fetch(url=url)
-			result = response.json
+			result = response.json()
 		except Exception as ex:
 			print(ex)
 
