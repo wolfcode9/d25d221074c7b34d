@@ -10,7 +10,6 @@ import json
 class Spider(Spider):
 	
 	siteUrl = ""
-	vip = 0
 	header = {
 		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
 		"Referer":  siteUrl
@@ -78,6 +77,7 @@ class Spider(Spider):
 	#推薦頁
 	def homeVideoContent(self):	
 		result = {}	
+	
 		url = f"{self.siteUrl}/api/vod?vip={self.vip}"
 
 		try:
@@ -104,8 +104,11 @@ class Spider(Spider):
 		
 		try:
 			response = self.fetch(url=url,params=params)
-			result = response.json()
-			result["page"] = pg	
+			result = response.json()			
+			result["page"] = pg
+			result["pagecount"] = 9999
+			result["limit"] = 20
+			result["total"] = 999999
 
 		except Exception as ex:
 			print(ex)
