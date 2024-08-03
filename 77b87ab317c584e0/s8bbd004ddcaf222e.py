@@ -163,7 +163,7 @@ class Spider(Spider):
 			print(ex)
 
 		headers  = {}
-		headers["User-Agent"] =  "okhttp/3.12.0"
+		headers["User-Agent"] = "okhttp/3.12.0"
 		headers["host"] = f"{vod_url.split('//')[1].split('/')[0]}"		
 		
 		result = {
