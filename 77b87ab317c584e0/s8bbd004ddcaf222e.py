@@ -10,10 +10,9 @@ import json
 class Spider(Spider):
 	
 	siteUrl = ""
-	header = {
-		"user-agent": "okhttp/3.12.0",
-		#"Referer":  siteUrl
-	}
+	headers = {}
+	headers["User-Agent"] = "okhttp/3.12.0"
+	#headers["Referer"] = siteUrl
 
 	# 設置年份範圍	
 	current_year = datetime.datetime.now().year 
@@ -161,17 +160,14 @@ class Spider(Spider):
 			vod_url = response.text
 		except Exception as ex:
 			print(ex)
-
-		headers  = {}
-		headers["User-Agent"] = "okhttp/3.12.0"
-		headers["host"] = f"{vod_url.split('//')[1].split('/')[0]}"		
 		
 		result = {
 			"parse": "0",
 			"playUrl": "",
 			"url": vod_url,
-			"header": headers
+			"header": self.headers
 		}
+		
 		return result
 	
 	
