@@ -162,9 +162,9 @@ class Spider(Spider):
 			print(ex)
 		
 		HOST = f"{vod_url.split('//')[1].split('/')[0]}"		
-		self.headers["User-Agent"] = "ExoSourceManager/1.0.3 (Linux;Android 10) ExoPlayerLib/2.11.3"
-		self.headers["allowCrossProtocolRedirects"] = True
-		self.headers["Accept-Encoding"] = "identity" 
+		#self.headers["User-Agent"] = "ExoSourceManager/1.0.3 (Linux;Android 10) ExoPlayerLib/2.11.3"
+		#self.headers["allowCrossProtocolRedirects"] = True
+		self.headers["Accept-Encoding"] = "gzip" 
 		self.headers["Host"] = HOST
 		self.headers["Connection"] = "Keep-Alive"
 		result = {
