@@ -52,8 +52,9 @@ class Spider(Spider):
 			data = json.loads(extend)
 			self.siteUrl = data["url"]
 			self.vip = data["vip"]
-		except:
-			pass
+
+		except Exception as ex:
+			print(ex)
 		
 	
 	#主頁
@@ -77,7 +78,7 @@ class Spider(Spider):
 	#推薦頁
 	def homeVideoContent(self):	
 		result = {}	
-		url = f"{self.siteUrl}/api/vod?vip={self.vip}"		
+		url = f"{self.siteUrl}/api/vod?vip={self.vip}"
 
 		try:
 			response = self.fetch(url=url)
