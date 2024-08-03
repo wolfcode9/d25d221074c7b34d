@@ -22,7 +22,7 @@ class Spider(Spider):
 	config = {
 		"player": {},
 		"filter": [
-			{"key": "vod_area", "name": "地區", "value": [
+			{"key": "region", "name": "地區", "value": [
 				{"n": "全部", "v": ""},
 				{"n": "大陸", "v": "大陸"},
 				{"n": "歐美", "v": "歐美"},
@@ -33,7 +33,7 @@ class Spider(Spider):
 				{"n": "新馬泰", "v": "新馬泰"},
 				{"n": "其他", "v": "其他"}
 			]},
-			{"key": "vod_year", "name": "年份", "value": [
+			{"key": "year", "name": "年份", "value": [
 				{"n": "全部", "v": ""},
 				*years
 			]}
@@ -98,17 +98,14 @@ class Spider(Spider):
 		params = {
 			"type_id": tid,
 			"page": pg,
-			"vod_area": extend.get("vod_area", ""),
-			"vod_year": extend.get("vod_year", ""),			
+			"vod_area": extend.get("region", ""),
+			"vod_year": extend.get("year", ""),			
 		}
 		
 		try:
 			response = self.fetch(url=url,params=params)
-			result = response.json()			
-			result["page"] = pg
-			result["pagecount"] = 9999
-			result["limit"] = 20
-			result["total"] = 999999
+			result = response.json()
+			result["page"] = pg	
 
 		except Exception as ex:
 			print(ex)
