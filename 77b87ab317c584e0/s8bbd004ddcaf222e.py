@@ -158,14 +158,14 @@ class Spider(Spider):
 
 		try:
 			response = self.fetch(url=url)
-			vod_url = response.text	
+			result = response.json
 		except Exception as ex:
 			print(ex)
 
 		result = {
 			"parse": "0",
 			"playUrl": "",
-			"url": vod_url,
+			"url": result.get("vod_url"),
 			"header": ""
 		}
 		return result
