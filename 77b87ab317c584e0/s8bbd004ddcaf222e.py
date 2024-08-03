@@ -106,9 +106,6 @@ class Spider(Spider):
 			response = self.fetch(url=url,params=params)
 			result = response.json()
 			result["page"] = pg
-			result["pagecount"] = 9999
-			result["limit"] = 20
-			result["total"] = 999999
 
 		except Exception as ex:
 			print(ex)
