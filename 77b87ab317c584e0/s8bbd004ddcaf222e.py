@@ -161,7 +161,7 @@ class Spider(Spider):
 		except Exception as ex:
 			print(ex)
 		
-		HOST = f"{url.split('//')[1].split('/')[0]}"
+		HOST = f"{vod_url.split('//')[1].split('/')[0]}"
 		self.headers["host"] = HOST
 		result = {
 			"parse": "0",
