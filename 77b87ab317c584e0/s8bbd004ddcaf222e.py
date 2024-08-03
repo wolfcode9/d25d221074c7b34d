@@ -98,8 +98,8 @@ class Spider(Spider):
 		params = {
 			"type_id": tid,
 			"page": pg,
-			"vod_area": extend.get("region", ""),
-			"vod_year": extend.get("year", ""),			
+			"vod_area": extend.get("region"),
+			"vod_year": extend.get("year"),			
 		}
 		
 		try:
