@@ -33,7 +33,7 @@ class Spider(Spider):
 				{"n": "新馬泰", "v": "新馬泰"},
 				{"n": "其他", "v": "其他"}
 			]},
-			{"key": "vod_area", "name": "年份", "value": [
+			{"key": "vod_year", "name": "年份", "value": [
 				{"n": "全部", "v": ""},
 				*years
 			]}
