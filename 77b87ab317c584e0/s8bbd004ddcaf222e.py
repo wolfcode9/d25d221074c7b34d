@@ -40,18 +40,8 @@ class Spider(Spider):
 			]}
 		]
 	}
-
 	
-	def vod_remark(self,vod={}):
-		parent_category_id = vod["parent_category_id"]
-		state = vod["state"]	#更新狀態
-		last_fragment_symbol = vod["last_fragment_symbol"] #級數
-		if parent_category_id in [101,102,103,105] :
-			remarks = f"{state} {last_fragment_symbol}集"
-		else:
-			remarks = ""		
-		return remarks
-
+	
 	#命名
 	def getName(self):
 		return "UBVod"
@@ -86,87 +76,35 @@ class Spider(Spider):
 	
 	#推薦頁
 	def homeVideoContent(self):	
-		result = {}		
-		video = []		
-		video_list = []
-		
-		by = 0 #key = 0:熱門  1:最近更新  2:最新上映
+		result = {}	
+		url = f"{self.siteUrl}/api/vod?vip={self.vip}"		
 
-		if self.vip:
-			pagesize = 100			
-			parent_category_ids = [108]
+		try:
+			response = self.fetch(url=url)
+			result = response.json()
 
-		else:
-			pagesize = 10		
-			parent_category_ids = [100, 101, 102, 103]
-	
-		with concurrent.futures.ThreadPoolExecutor() as executor:	
-			future_to_category = {
-				executor.submit(self.fetch, f"{self.siteUrl}/api/video/recommend?parent_category_id={parent_category_id}&page=1&pagesize={pagesize}&by={by}"): 
-				parent_category_id for parent_category_id in parent_category_ids
-			}			
-	
-			completed_futures = concurrent.futures.as_completed(future_to_category)
-			for future in completed_futures:
-				parent_category_id = future_to_category[future]
-				try:
-					response = future.result()
-					data = response.json()
+		except Exception as ex:
+			print(ex)
 
-					if by == 0:
-						video_list.extend(data.get("video_hot_list", []))
-					else:
-						video_list.extend(data.get("video_latest_list", []))
-
-				except Exception as ex:
-					print(ex)
-	
-		for vod in video_list:
-			video.append({
-				"vod_id": vod["id"],
-				"vod_name": vod["title"],
-				"vod_pic": vod["pic"],
-				"vod_remarks": self.vod_remark(vod)
-			})
-		
-		result["list"] = video
-	
 		return result
-		
+	
 	
 	#分類頁
 	def categoryContent(self, tid, pg, filter, extend):		
-		result = {}	
-		video = []			
-		url = f"{self.siteUrl}/api/video/list"
-		pagesize = 20
+		result = {}
+		url = f"{self.siteUrl}/api/vod/list"
 		
 		params = {
-			"parent_category_id": tid,
+			"type_id": tid,
 			"page": pg,
-			"region": extend.get("region", ""),
-			"year": extend.get("year", ""),
-			"pagesize": pagesize			
+			"vod_area": extend.get("vod_area", ""),
+			"vod_year": extend.get("vod_year", ""),			
 		}
 		
 		try:
 			response = self.fetch(url=url,params=params)
-			data = response.json()
-			video_list = data["data"]["video_list"]
-
-			for vod in video_list:
-				video.append({
-					"vod_id": vod["id"],
-					"vod_name": vod["title"],
-					"vod_pic": vod["pic"],
-					"vod_remarks": self.vod_remark(vod)
-            	})
-
-			result["list"] = video
-			result["page"] = pg
-			result["pagecount"] = 9999
-			result["limit"] = pagesize
-			result["total"] = 999999
+			result = response.json()
+			result["page"] = pg	
 
 		except Exception as ex:
 			print(ex)
@@ -181,89 +119,50 @@ class Spider(Spider):
 	
 	#搜索頁2
 	def searchContentPage(self, key, quick, pg="1"):
-		result = {}	
-		video = []
-		pagesize = 35
-		url = f"{self.siteUrl}/api/video/list"
+		result = {}
+		url = f"{self.siteUrl}/api/vod/list?wb={key}"
 
-		params = {
-			"keyword": key,
-			"page": 1,
-			"pagesize": pagesize			
-		}
 		try:
-			response = self.fetch(url=url,params=params)
-			data = response.json()
-			video_list = data["data"]["video_list"]
-
-			for vod in video_list:
-				video.append({
-					"vod_id": vod["id"],
-					"vod_name": vod["title"],
-					"vod_pic": vod["pic"],
-					"vod_remarks": self.vod_remark(vod)
-				})
-
-			result["list"] = video
+			response = self.fetch(url=url)
+			result = response.json()		
 
 		except Exception as ex:
-			print(ex)		
-
-		return result
+			print(ex)
+		
+		return result	
 
 	
 	#詳情頁
 	def detailContent(self, ids):
 		result = {}
-		video = []
-		video_id = ids[0]
-		url = f"{self.siteUrl}/api/video/info?video_id={video_id}"
+		vod_id = ids[0]
+		url = f"{self.siteUrl}/api/vod/detail?vod_id={vod_id}"
 
 		try:
 			response = self.fetch(url=url)
-			data = response.json()
-			data_video = data["video"]
-			fragment_ids = data["video_fragment_list"]
-			vod_play_urls  = ""
-			for fragment_id in fragment_ids:
-				vod_play_urls += f"{fragment_id['symbol']}${video_id}_{fragment_id['id']}#"
+			result = response.json()		
 
-			video.append ({			
-				"type_name": "",
-				"vod_id": data_video.get("id", ""),
-				"vod_name": data_video.get("title", ""),
-				"vod_remarks": self.vod_remark(data_video),
-				"vod_year": data_video.get("year", ""),
-				"vod_area": data_video.get("region", ""),
-				"vod_actor": data_video.get("starring", ""),
-				"vod_director": data_video.get("director", ""),
-				"vod_content":  data_video.get("description", ""),
-				"vod_play_from": "安博",
-				"vod_play_url": vod_play_urls.strip('#')
-			})
-			result['list'] = video
-		
 		except Exception as ex:
 			print(ex)
-
-		return result
+		
+		return result	
 	
 
 	#播放頁
 	def playerContent(self, flag, id, vipFlags):
 		ids = id.split("_")
-		video_id = ids[0]
-		video_fragment_id = ids[1]
-		url = f"{self.siteUrl}/api/video/source?video_id={video_id}&video_fragment_id={video_fragment_id}"
+		vod_id = ids[0]
+		vod_fragment_id = ids[1]
+		url = f"{self.siteUrl}/api/vod/source?vod_id={vod_id}&vod_fragment_id={vod_fragment_id}"
 
 		try:
 			response = self.fetch(url=url)
-			data = response.json()		
-			video_url = data["data"]["video_soruce"]["url"].split("?")[0] 
+			vod_url = response.json()		
+		
 			result = {
 				"parse": "0",
 				"playUrl": "",
-				"url": video_url,
+				"url": vod_url,
 				"header": ""
 			} 
 
