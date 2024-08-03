@@ -99,16 +99,13 @@ class Spider(Spider):
 		else:
 			pagesize = 10		
 			parent_category_ids = [100, 101, 102, 103]
-
-		# 使用 ThreadPoolExecutor 進行並行請求
-		with concurrent.futures.ThreadPoolExecutor() as executor:
-			# 提交所有請求並創建 future-to-category 字典
+	
+		with concurrent.futures.ThreadPoolExecutor() as executor:	
 			future_to_category = {
 				executor.submit(self.fetch, f"{self.siteUrl}/api/video/recommend?parent_category_id={parent_category_id}&page=1&pagesize={pagesize}&by={by}"): 
 				parent_category_id for parent_category_id in parent_category_ids
-			}
-			
-			# 使用 as_completed 獲取所有完成的 future
+			}			
+	
 			completed_futures = concurrent.futures.as_completed(future_to_category)
 			for future in completed_futures:
 				parent_category_id = future_to_category[future]
@@ -123,8 +120,7 @@ class Spider(Spider):
 
 				except Exception as ex:
 					print(ex)
-
-		# 構建最終的視頻列表
+	
 		for vod in video_list:
 			video.append({
 				"vod_id": vod["id"],
@@ -178,13 +174,8 @@ class Spider(Spider):
 		return result 
 	
 	
-	#搜索頁(舊)
-	def searchContent(self, key, quick):
-		return self.searchContentPage(key, quick, "1")
-	
-	
-	#搜索頁(新)
-	def searchContentPage(self, key, quick, pg):
+	#搜索頁
+	def searchContent(self, key, quick , pg="1"):
 		result = {}	
 		video = []		
 		pagesize = 35
