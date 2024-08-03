@@ -11,7 +11,7 @@ class Spider(Spider):
 	
 	siteUrl = ""
 	headers = {}
-	headers["User-Agent"] = "ExoSourceManager/1.0.3 (Linux;Android 10) ExoPlayerLib/2.11.3" #"okhttp/3.12.0"
+	headers["User-Agent"] = "okhttp/3.12.0"
 	#headers["Referer"] = siteUrl
 
 	# 設置年份範圍	
@@ -161,8 +161,12 @@ class Spider(Spider):
 		except Exception as ex:
 			print(ex)
 		
-		HOST = f"{vod_url.split('//')[1].split('/')[0]}"
-		self.headers["host"] = HOST
+		HOST = f"{vod_url.split('//')[1].split('/')[0]}"		
+		self.headers["User-Agent"] = "ExoSourceManager/1.0.3 (Linux;Android 10) ExoPlayerLib/2.11.3"
+		self.headers["allowCrossProtocolRedirects"] = True
+		self.headers["Accept-Encoding"] = "identity" 
+		self.headers["Host"] = HOST
+		self.headers["Connection"] = "Keep-Alive"
 		result = {
 			"parse": "0",
 			"playUrl": "",
