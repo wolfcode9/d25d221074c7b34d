@@ -155,7 +155,7 @@ class Spider(Spider):
 			result['list'] = vod
 		return result	
 	 
-	def searchContent(self,key,quick):
+	def searchContent(self, key, quick, pg="1"):
 		#https://m.mubai.link/search?search=我知道我爱你
 		result = {}
 		url = f'{self.siteUrl}/api/searchFilm?keyword={key}'
@@ -173,11 +173,6 @@ class Spider(Spider):
 		result['list'] = vod
 		return result
 	
-	def searchContentPage(self, key, quick, pg):
-		pass
-
-	def searchContentPage(self, key, quick, pg):
-		pass
 
 	def playerContent(self,flag,id,vipFlags):
 		result = {

@@ -46,12 +46,10 @@ class Spider(Spider):
 		result = {}
 		return result
 	
-	def searchContent(self,key,quick):
+	def searchContent(self,key,quick, pg="1"):
 		result = {}
-		return result
-	
-	def searchContentPage(self, key, quick, pg):
-		pass
+		return result	
+
 	
 	def playerContent(self,flag,id,vipFlags):
 		result = {}

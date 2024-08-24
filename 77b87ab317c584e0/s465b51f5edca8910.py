@@ -137,7 +137,7 @@ class Spider(Spider):
 		}]}			
 		return result
 	
-	def searchContent(self,key,quick):		
+	def searchContent(self, key, quick, pg="1"):		
 		url = f'{self.siteUrl}/ajax/search.html?wd={key}&mid=1&limit=18&page=1'		
 		jsonData = self.fetch(url).json()['list'][0]		
 		result = {'list': [{
@@ -146,12 +146,8 @@ class Spider(Spider):
 			"vod_pic": jsonData['vod_pic'],
 			"vod_remarks": jsonData['vod_remarks']
 		}]}
-		return result
-	
-	
-	def searchContentPage(self, key, quick, pg):
-		pass
-	
+		return result	
+
 	def playerContent(self,flag,id,vipFlags):
 		result = {
         	'parse': '0',
