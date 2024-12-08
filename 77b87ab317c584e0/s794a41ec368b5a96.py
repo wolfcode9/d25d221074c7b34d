@@ -1,3 +1,4 @@
+#2024.12.08
 #coding=utf-8
 #!/usr/bin/python
 import sys
@@ -119,9 +120,9 @@ class Spider(Spider):
             	})
 			result['list'] = vod
 			result['page'] = pg
-			result['pagecount'] = jsonData['page']['pageCount']
+			result['pagecount'] = jsonData['data']['page']['pageCount']
 			result['limit'] = 35
-			result['total'] = jsonData['page']['total']
+			result['total'] = jsonData['data']['page']['total']
 		return result 
 	
 	def detailContent(self, ids):
@@ -155,7 +156,7 @@ class Spider(Spider):
 			result['list'] = vod
 		return result	
 	 
-	def searchContent(self, key, quick, pg="1"):
+	def searchContent(self, key, quick, pg="1"):	
 		#https://m.mubai.link/search?search=我知道我爱你
 		result = {}
 		url = f'{self.siteUrl}/api/searchFilm?keyword={key}'
@@ -172,7 +173,6 @@ class Spider(Spider):
 			})      
 		result['list'] = vod
 		return result
-	
 
 	def playerContent(self,flag,id,vipFlags):
 		result = {
