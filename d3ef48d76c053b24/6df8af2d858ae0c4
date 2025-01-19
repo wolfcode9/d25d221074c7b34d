@@ -138,7 +138,7 @@
             {
                 "name": "韓國新聞",
                 "urls": [
-                    "https://www.youtube.com/watch?v=ZtcuWexUfLY"
+                    "https://www.youtube.com/watch?v=FJfwehhzIhw"
                 ],
                 "number": "020"
             },
@@ -164,7 +164,7 @@
             {
                 "name": "Cafe Music BGM",
                 "urls": [
-                    "https://www.youtube.com/watch?v=Dx5qFachd3A"
+                    "https://www.youtube.com/watch?v=6gymeY0-nME"
                 ],
                 "number": "023"
             },
@@ -213,7 +213,7 @@
             {
                 "name": "抖音熱曲",
                 "urls": [
-                    "https://www.youtube.com/watch?v=6hX1RSp4n2c"
+                    "https://www.youtube.com/watch?v=pDui2K0JGWA"
                 ],
                 "number": "030"
             },
@@ -317,8 +317,8 @@
                     "https://f05.elektra05world.xyz/live/rx6/351/557be9555a5c3cb30216f77a35086e09/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "8b6720d70d22b5aeac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "78a48be5e8e69689ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "043"
             },
@@ -328,8 +328,8 @@
                     "https://f06.flost06jtgoopk.xyz/live/rx6/1137/3289d31a09e3d54fce390c6376b8864f/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "dde214e88c26e208ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "5ca259030b82f881ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "044"
             },
@@ -339,8 +339,8 @@
                     "https://f07.goodness07word.xyz/live/rx2/41/e6c7d418212dc1d603264b8067a24a43/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "8a6c86479eb71409ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "a88e4fde5602827cac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "045"
             },
@@ -364,8 +364,8 @@
                     "https://f11.kaller11norway.xyz/live/rx6/16/73bd656acb1c2136ba097ef380161f95/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "865ec6e65b946b19ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "159e1ee79feadda6ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "048"
             },
@@ -375,8 +375,8 @@
                     "https://f07.goodness07word.xyz/live/rx3/40/5fb35915b0939c31e57859f6adb9db50/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "23f6644c575d7c01ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "032ed285d3db4a80ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "049"
             },
@@ -386,8 +386,8 @@
                     "https://f23.bear02forest.xyz/live/rx3/66/02429599f4bb65548a1001cd451916d3/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "94238781ecb87919ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "4237b52128e7c065ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "050"
             },
@@ -404,30 +404,30 @@
                     "https://f07.goodness07word.xyz/live/rx6/2815/e3e393bb8de8dc49b331aee8c98b58d1/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "1693a514418ab82fac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "d27f33afa7ec6044ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "052"
             },
             {
                 "name": "三立臺灣",
                 "urls": [
-                    "https://f06.flost06jtgoopk.xyz/live/rx2/21/6fc7fffcd9616893771cfc345be8efac/index.m3u8"
+                    "https://f07.goodness07word.xyz/live/rx2/21/6fc7fffcd9616893771cfc345be8efac/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "76c8f75a1ae30dfeac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "71d5e1cb58c61e58ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "053"
             },
             {
                 "name": "三立都會",
                 "urls": [
-                    "https://f06.flost06jtgoopk.xyz/live/rx2/38/5ee330f4d6ccd967306f32ac9ee181a0/index.m3u8"
+                    "https://f02.bear02forest.xyz/live/rx2/38/5ee330f4d6ccd967306f32ac9ee181a0/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "2e0ccd9551400726ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "58e43587a785522cac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "054"
             },
@@ -444,8 +444,8 @@
                     "https://f05.elektra05world.xyz/live/rx6/324/e4d60617189064e2807ed197a4fbc493/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "c64ca8777b51f35dac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "65e64e6648a8db82ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "056"
             },
@@ -455,19 +455,19 @@
                     "https://f07.goodness07word.xyz/live/rx3/3072/ac1b02c6b2dc0a7d5710798d5590b709/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "f28d63c2b59cf1bdac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "9a8bfe14dbdbe63cac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "057"
             },
             {
                 "name": "中視",
                 "urls": [
-                    "https://f01.alert01territory.xyz/live/rx3/333/dade826869af6bb8ceca0e5eb6eb4cb7/index.m3u8"
+                    "https://f24.candy03tyke.xyz/live/rx3/333/dade826869af6bb8ceca0e5eb6eb4cb7/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "feba847d3826ac05ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "7c7b89620fe1cb09ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "058"
             },
@@ -484,8 +484,8 @@
                     "https://f01.alert01territory.xyz/live/rx2/185/bc8b713a340cd1faee04443c4b20cf7d/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "04fa110b2f8f270cac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "79f4f7d436b58697ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "060"
             },
@@ -502,8 +502,8 @@
                     "https://f04.dual04pressure.xyz/live/rx3/105/8b2a1fde9e9d2fd5fe3965e6c1f287f9/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "a7f166d74eacfb35ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "dc60fccb11e1d628ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "062"
             },
@@ -513,8 +513,8 @@
                     "https://f03.candy03tyke.xyz/live/rx3/318/6d3a92461d1956a18c96d06de03fa2ff/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "a2d25b470b57e6f6ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "a2c0e4e84f23a050ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "063"
             },
@@ -524,8 +524,8 @@
                     "https://f23.bear02forest.xyz/live/rx3/1024/991b8fd4e5f2e514a662c4d4e99530b2/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "cefb8f7b56f9f803ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "39feaa4947767c62ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "064"
             },
@@ -535,8 +535,8 @@
                     "https://f06.flost06jtgoopk.xyz/live/rx2/2286/a65ee8da09a60f8f0e7fa0a767dca1a9/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "37bc2027e0464899ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "a32fb72c44ed588bac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "065"
             },
@@ -553,8 +553,8 @@
                     "https://f04.dual04pressure.xyz/live/rx2/1340/066744785bf03d7cd3ff54a30dba802f/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "98e93b1ceceea415ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "f90e15b5b37a805aac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "067"
             },
@@ -571,8 +571,8 @@
                     "https://f06.flost06jtgoopk.xyz/live/rx3/326/07906e03b0a3245c37241905320fc4da/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "9265e1a9b06c57abac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "8440840a923e60f5ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "069"
             },
@@ -596,8 +596,8 @@
                     "https://f09.ideas09course.xyz/live/rx2/87/2b76c1e716a42fb69ba332f4ca557924/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "6934130334376fe5ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "bbde9aa92178797cac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "072"
             },
@@ -607,8 +607,8 @@
                     "https://f26.dual04pressure.xyz/live/rx2/1359/fc068381ec8e409889e5e096dbd43632/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "161268dbcbbc3b4dac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "7abef8328a7979a3ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "073"
             },
@@ -625,8 +625,8 @@
                     "https://f09.ideas09course.xyz/live/rx6/3/e714e046ee60897fe4e006c1d40ec0d3/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "58dab807a6f03307ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "d2909648075b97b8ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "075"
             },
@@ -636,28 +636,39 @@
                     "https://f03.candy03tyke.xyz/live/rx6/372/d91d20237f49d9b37a4ceb8e03918329/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "5aebd1a07256a62cac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "905af68ca841a32aac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
                 "number": "076"
+            },
+            {
+                "name": "東森超視",
+                "urls": [
+                    "https://f07.goodness07word.xyz/live/rx6/80/7948c3bef9bf67f44287620f8bcfb656/index.m3u8"
+                ],
+                "header": {
+                    "fftoken": "dba20b97255ebca0ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
+                },
+                "number": "077"
             },
             {
                 "name": "綜藝大熱門",
                 "urls": [
                     "https://www.youtube.com/watch?v=cpsP1wd-HgM"
                 ],
-                "number": "077"
+                "number": "078"
             },
             {
                 "name": "緯來日本",
                 "urls": [
-                    "https://f06.flost06jtgoopk.xyz/live/rx2/46/cb95c77fc3fcb5415a955e3267d7e34e/index.m3u8"
+                    "https://f07.goodness07word.xyz/live/rx2/46/cb95c77fc3fcb5415a955e3267d7e34e/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "c5777a5210b9a452ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "364108d833667cefac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "078"
+                "number": "079"
             },
             {
                 "name": "緯來綜合",
@@ -665,10 +676,10 @@
                     "https://f03.candy03tyke.xyz/live/rx2/2726/5a0da9872524be8b8bdd024267afc3c7/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "bb61ac01056ce256ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "de1d13bbeab3c993ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "079"
+                "number": "080"
             },
             {
                 "name": "緯來育樂",
@@ -676,10 +687,10 @@
                     "https://f22.very22sykgh.xyz/live/rx2/338/3d7e621e0260f3ccf91b7eafddd9a65e/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "5193472f50a84350ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "c7b9d4b6329f32f5ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "080"
+                "number": "081"
             },
             {
                 "name": "華視",
@@ -687,17 +698,17 @@
                     "https://f02.bear02forest.xyz/live/rx6/32/a47f4cd27568461a9c3f82ede4db183d/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "681b28e3a920c1f9ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "5a55bc2f5696930aac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "081"
+                "number": "082"
             },
             {
                 "name": "豬哥會社",
                 "urls": [
                     "https://www.youtube.com/watch?v=0aBJU1mFpsk"
                 ],
-                "number": "082"
+                "number": "083"
             },
             {
                 "name": "靖天歡樂",
@@ -705,10 +716,10 @@
                     "https://f04.dual04pressure.xyz/live/rx6/51/ac133b096da8eb7dc2ce181fa0d63e73/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "ef4e9fa4b090255bac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "74c3f4b231a35724ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "083"
+                "number": "084"
             },
             {
                 "name": "靖天資訊",
@@ -716,10 +727,10 @@
                     "https://f04.dual04pressure.xyz/live/rx2/49/8b5e3a965bcb9c7ed500f53717972080/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "2997c71d0d2cab3fac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "72ab8e7a6c0e9cb0ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "084"
+                "number": "085"
             },
             {
                 "name": "高點綜合",
@@ -727,10 +738,10 @@
                     "https://f09.ideas09course.xyz/live/rx3/99/ec8e2b32f2d77b84d769b7ca3dcaade3/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "783fc3f5b06b541bac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "100d816fe7924efeac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "085"
+                "number": "086"
             }
         ]
     },
@@ -743,10 +754,10 @@
                     "https://f01.alert01territory.xyz/live/rx3/97/11e37dddbcd4e96670432efb8dd39ac4/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "5dd98c4abb79aad9ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "faf29f398371031cac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "086"
+                "number": "087"
             },
             {
                 "name": "BBC生活風格",
@@ -754,10 +765,10 @@
                     "https://f06.flost06jtgoopk.xyz/live/rx6/424/94d5d6fb81bcfc279ea5e9485cf564c6/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "e425087bd77275b3ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "adc0eca71f46dc8eac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "087"
+                "number": "088"
             },
             {
                 "name": "CCTV17",
@@ -765,10 +776,10 @@
                     "https://f26.dual04pressure.xyz/live/rx3/3260/d268fc3e1ba396694d97447d2d0cc0a4/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "a84aa50e03687e7aac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "e51a3d5cee807c81ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "088"
+                "number": "089"
             },
             {
                 "name": "EYETV旅遊",
@@ -776,10 +787,10 @@
                     "https://f02.bear02forest.xyz/live/rx2/1494/c42aa6cd13370433d103ede1facd219a/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "d824e8c7eb583281ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "c907e71d4b28c2e3ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "089"
+                "number": "090"
             },
             {
                 "name": "Food Network",
@@ -787,10 +798,10 @@
                     "https://f22.very22sykgh.xyz/live/rx3/1421/363ae26bf4cb50eb331f95dec2cc7477/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "088187ca6355709aac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "9a82e53a37687280ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "090"
+                "number": "091"
             },
             {
                 "name": "Food Network Canada",
@@ -798,10 +809,10 @@
                     "https://f22.very22sykgh.xyz/live/rx2/1265/34de143dc55a9fab6719831948007d9b/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "d2b39d9856a3436bac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "7adfd56e5bcf1f6dac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "091"
+                "number": "092"
             },
             {
                 "name": "Globetrotter",
@@ -809,10 +820,10 @@
                     "https://f02.bear02forest.xyz/live/rx6/3259/85f3e03b78f0bfd1f5ee3002c71516e6/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "963365cacb1c6fd6ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "d605c5f2ff02cbf0ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "092"
+                "number": "093"
             },
             {
                 "name": "History",
@@ -820,10 +831,10 @@
                     "https://f22.very22sykgh.xyz/live/rx3/1413/9ad9d223fb7f0e4fc112a2dd60485e06/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "4fa032bc63edde9dac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "edffb3a4f0725ebdac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "093"
+                "number": "094"
             },
             {
                 "name": "TLC",
@@ -831,10 +842,10 @@
                     "https://f23.bear02forest.xyz/live/rx3/1533/1d6d8b1ee93742bd54c60e9b5e0aa33e/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "b6de680be6eb1645ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "dd7d2997907e1caeac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "094"
+                "number": "095"
             },
             {
                 "name": "TLC Canada",
@@ -842,10 +853,10 @@
                     "https://f22.very22sykgh.xyz/live/rx2/1262/0c0a5f381f609317a0693d5c4fdc17b0/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "4cc625fdae68f17cac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "b9c79978773580c5ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "095"
+                "number": "096"
             },
             {
                 "name": "TV5MONDE STYLE",
@@ -853,10 +864,10 @@
                     "https://f01.alert01territory.xyz/live/rx6/389/a754949c9e43602101465cc744f0ee9c/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "24581a9eba9ef697ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "c9fae136c08c42e5ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "096"
+                "number": "097"
             },
             {
                 "name": "亞洲旅遊",
@@ -864,10 +875,10 @@
                     "https://f03.candy03tyke.xyz/live/rx3/2299/c972be3a80960deb0e524964bd920900/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "bcb18e75e91cef55ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "0649c4cae2029be7ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "097"
+                "number": "098"
             },
             {
                 "name": "動物星球",
@@ -875,10 +886,10 @@
                     "https://f07.goodness07word.xyz/live/rx2/367/ff301c690370aa4dd23e81ec050a4166/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "9b3ab5e36442cd10ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "f58834baf4d59a82ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "098"
+                "number": "099"
             },
             {
                 "name": "國家野生",
@@ -886,10 +897,10 @@
                     "https://www.usplaycdn.com/live/rx2/1038/5ba9a1d060d0e52173e290171f599c36/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "7721471418b96fccac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "395e8128bc16fd9bac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "099"
+                "number": "100"
             },
             {
                 "name": "探索EVE",
@@ -897,10 +908,10 @@
                     "https://f22.very22sykgh.xyz/live/rx3/1036/1b9fa73f3ec6085cbb526f12829392c3/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "53ec79794e7a6886ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "2dc1ffcbbbaa711aac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "100"
+                "number": "101"
             },
             {
                 "name": "探索亞洲",
@@ -908,10 +919,10 @@
                     "https://f05.elektra05world.xyz/live/rx3/306/c0fce31de9cd31f511bd29b72b048fe9/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "0b972e0739b0fe0dac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "2507e48d35e5d7cfac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "101"
+                "number": "102"
             },
             {
                 "name": "探索動力",
@@ -919,10 +930,10 @@
                     "https://f01.alert01territory.xyz/live/rx6/335/ed56e477c3b37e051e5186c12a973d43/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "f0c4004107ec63d5ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "28771b925922e528ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "102"
+                "number": "103"
             },
             {
                 "name": "探索科學",
@@ -930,10 +941,10 @@
                     "https://f02.bear02forest.xyz/live/rx3/343/dec74b54c19ee43f6f1a55dc51e45474/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "833793c1d27dd1ecac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "45de1b598f808ae4ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "103"
+                "number": "104"
             },
             {
                 "name": "探索頻道",
@@ -941,10 +952,10 @@
                     "https://f07.goodness07word.xyz/live/rx3/2817/4d46e912791789c890984a0a012f41cb/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "d201dcd159a9e6cfac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "be4f78751193f063ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "104"
+                "number": "105"
             },
             {
                 "name": "法國時裝",
@@ -952,10 +963,10 @@
                     "https://f21.user21stars.xyz/live/rx3/2287/734523251adaddb35dcbb835569a5dd8/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "74c492155d3eed02ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "0f3912cb99ea3259ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "105"
+                "number": "106"
             },
             {
                 "name": "罪案偵查",
@@ -963,10 +974,10 @@
                     "https://f03.candy03tyke.xyz/live/rx3/2303/a3c9ca4ab1dd02b3a921def0e41de7b0/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "e3aa901f48e9bf8dac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "87b7650a64ec4cdcac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "106"
+                "number": "107"
             },
             {
                 "name": "美食星球",
@@ -974,10 +985,10 @@
                     "https://f05.elektra05world.xyz/live/rx6/3073/07b0e4c92de821f7970ab26ef3fe78b3/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "c479c17883b35db0ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "67b8f03201f64d91ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "107"
+                "number": "108"
             }
         ]
     },
@@ -990,10 +1001,10 @@
                     "https://f06.flost06jtgoopk.xyz/live/rx6/1066/9136d070d6f3758f1c1cba0c43434a32/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "a67f5be21d73816dac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "cddc94e69ccdac5bac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "108"
+                "number": "109"
             },
             {
                 "name": "CATCHPLAY",
@@ -1001,10 +1012,10 @@
                     "https://f09.ideas09course.xyz/live/rx6/362/6bb4cfa5e01337e10b035fbbbb2023b1/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "602ac4ccb1159f07ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "d3924e4b83c9feeaac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "109"
+                "number": "110"
             },
             {
                 "name": "CBN歡笑劇場",
@@ -1012,10 +1023,10 @@
                     "https://f24.candy03tyke.xyz/live/rx6/1348/eb15f3c03468fdeaf18d7888549f062c/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "2b694199d3b15104ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "695e3a2222d80e9bac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "110"
+                "number": "111"
             },
             {
                 "name": "CHC動作電影",
@@ -1023,10 +1034,10 @@
                     "https://f06.flost06jtgoopk.xyz/live/rx6/1346/acf597f70bba87013882928b0166549c/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "ed8659729609a456ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "4d97bbd9efdac36aac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "111"
+                "number": "112"
             },
             {
                 "name": "CHC家庭影院",
@@ -1034,10 +1045,10 @@
                     "https://f05.elektra05world.xyz/live/rx6/1347/3ef90fd1e80ff28a49dddfed80a9e3d6/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "6f800233d7ddb23eac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "9a0600e742a4240bac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "112"
+                "number": "113"
             },
             {
                 "name": "CHC影迷電影",
@@ -1045,10 +1056,21 @@
                     "https://f09.ideas09course.xyz/live/rx6/1345/11cd55692b29bdd722ac86ee14810121/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "5bbdeabecb445108ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "571c819f43899a7dac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "113"
+                "number": "114"
+            },
+            {
+                "name": "CineMAX",
+                "urls": [
+                    "https://f22.very22sykgh.xyz/live/rx3/346/88d2dbfdc923d54853a808f51c4205de/index.m3u8"
+                ],
+                "header": {
+                    "fftoken": "27d34ffeaf58128aac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
+                },
+                "number": "115"
             },
             {
                 "name": "EYE戲劇",
@@ -1056,21 +1078,21 @@
                     "https://f07.goodness07word.xyz/live/rx2/191/21e8f83acb6675f610ead74fb45940a9/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "6b8cd5404e9c0590ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "056ae5cbb0cff463ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "114"
+                "number": "116"
             },
             {
                 "name": "HBO HD",
                 "urls": [
-                    "https://f06.flost06jtgoopk.xyz/live/rx3/332/c3ee7c67677b7f05181095969a208d56/index.m3u8"
+                    "https://f07.goodness07word.xyz/live/rx3/332/c3ee7c67677b7f05181095969a208d56/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "c9d03cf939ec84dfac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "afda6eae2684b8f2ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "115"
+                "number": "117"
             },
             {
                 "name": "HBO Hits",
@@ -1078,10 +1100,10 @@
                     "https://www.readworlder.com/live/rx3/330/37fc9f5b22a480ddbbf584a274db5e1b/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "762842a3fbc298efac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "334a0d6cf0dd7c8bac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "116"
+                "number": "118"
             },
             {
                 "name": "HBO Signature",
@@ -1089,10 +1111,10 @@
                     "https://f07.goodness07word.xyz/live/rx3/329/8ccbbf264811c91db9abd43003133c56/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "74672bb8ac17a26cac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "5697a15b2453bff6ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "117"
+                "number": "119"
             },
             {
                 "name": "ONE",
@@ -1100,10 +1122,10 @@
                     "https://f01.alert01territory.xyz/live/rx3/1349/a231e82b7fdfe4dd927e121189fdfb99/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "fdfb766ecba5b38eac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "c11ee225ff974f14ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "118"
+                "number": "120"
             },
             {
                 "name": "三立戲劇",
@@ -1111,10 +1133,10 @@
                     "https://f05.elektra05world.xyz/live/rx2/64/7eb7fad0f5baee5612a90ae38aa2ffc4/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "9780834fcccb9ec8ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "d0c6a957eecf8694ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "119"
+                "number": "121"
             },
             {
                 "name": "八大戲劇",
@@ -1122,10 +1144,10 @@
                     "https://f01.alert01territory.xyz/live/rx3/81/22a77094a382aee4ab15ec28d11edddf/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "578529d5ef3df5afac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "04d7d8dd9eac2cc2ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "120"
+                "number": "122"
             },
             {
                 "name": "公視戲劇",
@@ -1133,10 +1155,10 @@
                     "https://f04.dual04pressure.xyz/live/rx1/69/f8e7ccadffad914e36b269c152e95d68/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "6adae2cd36545faeac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "abb09772e531048bac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "121"
+                "number": "123"
             },
             {
                 "name": "天映經典",
@@ -1144,10 +1166,10 @@
                     "https://f01.alert01territory.xyz/live/rx3/2289/99c0ff4912cd73661e0c8fbc069e35e1/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "ad5c0ed43928a655ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "ebbf0fa37da1cdd4ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "122"
+                "number": "124"
             },
             {
                 "name": "好萊塢電影",
@@ -1155,10 +1177,10 @@
                     "https://f02.bear02forest.xyz/live/rx3/37/f5ea7168e31c27a91ae63847ff23f624/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "ec79682bed14c966ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "d7659543625220d1ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "123"
+                "number": "125"
             },
             {
                 "name": "愛爾達影劇",
@@ -1166,10 +1188,10 @@
                     "https://f05.elektra05world.xyz/live/rx6/500/0c635b3fb8304999ca45e24efa8bea59/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "a069ae78511f7b25ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "ea2134b87ff85239ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "124"
+                "number": "126"
             },
             {
                 "name": "東森戲劇",
@@ -1177,21 +1199,32 @@
                     "https://f07.goodness07word.xyz/live/rx2/321/4e2f998a866a307a82b9956330c56445/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "91da5faa111a839aac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "8fd2f2f8fc7e65ddac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "125"
+                "number": "127"
+            },
+            {
+                "name": "東森洋片",
+                "urls": [
+                    "https://f09.ideas09course.xyz/live/rx3/1128/ec5126588359f61ea7e88f8c6ebd57e4/index.m3u8"
+                ],
+                "header": {
+                    "fftoken": "92ca5f30d5a2dd82ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
+                },
+                "number": "128"
             },
             {
                 "name": "東森電影",
                 "urls": [
-                    "https://f03.candy03tyke.xyz/live/rx3/350/a9bb24c537e28a17f669ddb3d73f0cf8/index.m3u8"
+                    "https://f02.bear02forest.xyz/live/rx3/350/a9bb24c537e28a17f669ddb3d73f0cf8/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "fb3f53be99f36e8aac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "d744b7bfaae595d5ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "126"
+                "number": "129"
             },
             {
                 "name": "緯來戲劇",
@@ -1199,10 +1232,10 @@
                     "https://f22.very22sykgh.xyz/live/rx3/339/f5e0c38ca354303f2016f31ea41d16f6/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "605b54a81e5c424eac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "0f73423f4c13a589ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "127"
+                "number": "130"
             },
             {
                 "name": "緯來電影",
@@ -1210,10 +1243,10 @@
                     "https://f09.ideas09course.xyz/live/rx2/2728/0020cabc374f86045aadc52cab7429e6/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "9ed58dc4275bb5aaac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "5eaafd16ffa1428aac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "128"
+                "number": "131"
             },
             {
                 "name": "美亞電影",
@@ -1221,10 +1254,10 @@
                     "https://f07.goodness07word.xyz/live/rx2/375/9c021140ec069f78be03c436f1927ff4/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "4367a92f8f45b681ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "9e9d32643cca112aac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "129"
+                "number": "132"
             },
             {
                 "name": "華納電影",
@@ -1232,10 +1265,10 @@
                     "https://f04.dual04pressure.xyz/live/rx3/83/e8896764b212e832926939f115411d2f/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "f7f0b280c12eeaf7ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "907d4b4c448c8ab2ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "130"
+                "number": "133"
             },
             {
                 "name": "采昌影劇",
@@ -1243,10 +1276,10 @@
                     "https://f09.ideas09course.xyz/live/rx6/62/eb6f32d1c9398fd34444e9ac72ea3edf/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "6cbd965b4320801eac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "cbba3d3a1409f503ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "131"
+                "number": "134"
             },
             {
                 "name": "霹靂臺灣",
@@ -1254,10 +1287,10 @@
                     "https://f02.bear02forest.xyz/live/rx3/1339/987d2b77101a97fe6d2ba7d394b3bda1/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "281675e1fbc99421ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "edc16eee10512618ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "132"
+                "number": "135"
             },
             {
                 "name": "龍翔時代",
@@ -1265,10 +1298,10 @@
                     "https://f07.goodness07word.xyz/live/rx6/373/56ae6fea4518615238b202ce322f7bea/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "8fd68ec5ce454999ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "49f9768fe482f78cac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "133"
+                "number": "136"
             },
             {
                 "name": "龍華日韓",
@@ -1276,10 +1309,10 @@
                     "https://f05.elektra05world.xyz/live/rx6/382/21011f0576b75e3d57692f40dc8a4e24/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "a0348173c2372da6ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "7f5d350cd0a49d3dac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "134"
+                "number": "137"
             },
             {
                 "name": "龍華電影",
@@ -1287,10 +1320,10 @@
                     "https://f05.elektra05world.xyz/live/rx3/311/9c37b8de5a8a7ee56b499ed3a7d15346/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "2b156c74caaf53e7ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "9cf8085af4637fc4ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "135"
+                "number": "138"
             }
         ]
     },
@@ -1300,13 +1333,13 @@
             {
                 "name": "ELTA體育1",
                 "urls": [
-                    "https://f07.goodness07word.xyz/live/rx3/192/386bf354dfa909e3785fe44bd09be90a/index.m3u8"
+                    "https://f09.ideas09course.xyz/live/rx3/192/386bf354dfa909e3785fe44bd09be90a/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "7f5437e742079962ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "238cc6e10c98f548ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "136"
+                "number": "139"
             },
             {
                 "name": "ELTA體育2",
@@ -1314,10 +1347,10 @@
                     "https://f04.dual04pressure.xyz/live/rx2/2730/e708b07e9d66ac0e768344c76f1f3bb4/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "67db3ccd0ab6362eac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "59d941366ad408d8ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "137"
+                "number": "140"
             },
             {
                 "name": "ELTA體育3",
@@ -1325,21 +1358,21 @@
                     "https://f04.dual04pressure.xyz/live/rx3/194/854159896ceb8e5abeab85d6ae58f4ae/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "6fb0c6f0795b5bd9ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "488f5054c35bdf0fac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "138"
+                "number": "141"
             },
             {
                 "name": "ELTA體育4",
                 "urls": [
-                    "https://f05.elektra05world.xyz/live/rx3/2820/c814d72f5124263f90c7df61f82212ec/index.m3u8"
+                    "https://f06.flost06jtgoopk.xyz/live/rx3/2820/c814d72f5124263f90c7df61f82212ec/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "4a57bf01790e9a33ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "15b20ed5e714179eac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "139"
+                "number": "142"
             },
             {
                 "name": "Z頻道",
@@ -1347,10 +1380,10 @@
                     "https://f01.alert01territory.xyz/live/rx3/1130/32b32c06671f58c9e52ac5b646fd7264/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "afe19c775425a853ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "c0156a6c2efc9d83ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "140"
+                "number": "143"
             },
             {
                 "name": "博斯無限",
@@ -1358,10 +1391,10 @@
                     "https://f05.elektra05world.xyz/live/rx3/237/79557802d92d2a883ad535faeced15dc/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "b3dbb59ec6cdade6ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "e55c4b3e8d1f0915ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "141"
+                "number": "144"
             },
             {
                 "name": "博斯網球",
@@ -1369,21 +1402,21 @@
                     "https://f09.ideas09course.xyz/live/rx3/498/f340b8c527112a503ae6978a78398a03/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "322941f1d4d4f4d7ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "77027f2735795c93ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "142"
+                "number": "145"
             },
             {
                 "name": "博斯運動1",
                 "urls": [
-                    "https://f07.goodness07word.xyz/live/rx3/379/54cc989f885c41dc01d75efef1042236/index.m3u8"
+                    "https://f05.elektra05world.xyz/live/rx3/379/54cc989f885c41dc01d75efef1042236/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "c6bf434f1b2f3c56ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "f15206a9e1ac8e91ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "143"
+                "number": "146"
             },
             {
                 "name": "博斯高球1",
@@ -1391,10 +1424,10 @@
                     "https://www.usplaycdn.com/live/rx3/377/7d91a7bf4713e0a7f302a0e04883351c/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "c322f61eed95e7f6ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "a969b75dfb15c0afac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "144"
+                "number": "147"
             },
             {
                 "name": "博斯高球2",
@@ -1402,10 +1435,10 @@
                     "https://f22.very22sykgh.xyz/live/rx3/378/44dea8ff662b6cd43b53946b19021dc7/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "6c5f934c8a4481b0ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "0d419289d53cf9e7ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "145"
+                "number": "148"
             },
             {
                 "name": "博斯魅力",
@@ -1413,21 +1446,21 @@
                     "https://f07.goodness07word.xyz/live/rx1/175/daefd92214f4017d25b72e0c103a6963/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "d77be84e7ad9e186ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "325a185ebef7747cac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "146"
+                "number": "149"
             },
             {
                 "name": "歐洲體育",
                 "urls": [
-                    "https://f04.dual04pressure.xyz/live/rx6/1342/239b2decd3a67856f7d6f8de6d08d2dd/index.m3u8"
+                    "https://f02.bear02forest.xyz/live/rx6/1342/239b2decd3a67856f7d6f8de6d08d2dd/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "46cbc14f80f88d14ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "6cd733d5a8e66df3ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "147"
+                "number": "150"
             },
             {
                 "name": "緯來體育",
@@ -1435,10 +1468,10 @@
                     "https://f09.ideas09course.xyz/live/rx2/118/a41a7d62f55149589e9f4134ad82b7e2/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "4be790a105aa0da8ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "8a8decb381a8b88fac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "148"
+                "number": "151"
             },
             {
                 "name": "魅力足球",
@@ -1446,10 +1479,10 @@
                     "https://f02.bear02forest.xyz/live/rx6/464/e5f18089060b5b233eadc5834adf8657/index.m3u8"
                 ],
                 "header": {
-                    "fftoken": "c7eb3fb252e55889ac026a3de91358e5",
-                    "playtoken": "08afdd4878b08576ab974cc360959419"
+                    "fftoken": "72e7702846cc1326ac026a3de91358e5",
+                    "playtoken": "167b317afbd71c73978a370cbfb09db1"
                 },
-                "number": "149"
+                "number": "152"
             }
         ]
     }
