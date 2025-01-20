@@ -1,6 +1,7 @@
 #coding=utf-8
 #!/usr/bin/python
 #Updated 2025.01.20
+#Web Site: https://www.yingshi.tv/
 import sys
 sys.path.append('..') 
 from base.spider import Spider
