@@ -1,6 +1,5 @@
 #coding=utf-8
 #!/usr/bin/python
-#Updated 2025.01.20
 import sys
 sys.path.append('..') 
 from base.spider import Spider
