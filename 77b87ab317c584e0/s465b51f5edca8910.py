@@ -1,11 +1,13 @@
 #coding=utf-8
 #!/usr/bin/python
+#Updated 2025.01.20
 import sys
 sys.path.append('..') 
 from base.spider import Spider
 import requests
 from datetime import datetime
 
+apiurl = "https://api.yingshi.tv"
 
 class Spider(Spider):
 	current_year = datetime.now().year
@@ -37,15 +39,13 @@ class Spider(Spider):
         ]
     }
 
-
 	#命名
 	def getName(self):
-		return "影視"
-
+		return "YingShi"
 	
-	def init(self,extend={}):		
-		self.extend = extend	
-
+	def init(self,extend={}):
+		self.apiurl = apiurl
+		self.extend = extend
 	
 	#主頁
 	def homeContent(self,filter):		
@@ -63,18 +63,16 @@ class Spider(Spider):
 	#推薦頁
 	def homeVideoContent(self):		
 		result  = {}		
-		url = "https://api.yingshi.tv/page/v4.5/typepage?id=0"
+		url = f"{self.apiurl}/page/v4.5/typepage?id=0"
 		rsp = self.fetch(url).json()
 		data = rsp.get("data","")
 		if data:
 			result["list"] = data["yunying"][0]["vod_list"]
 		return result
 
-
 	#分類頁	
-	def categoryContent(self, tid, pg, filter, extend):			
-		#https://api.yingshi.tv/vod/v1/vod/list?order=desc&limit=30&tid=1&by=time&class=%E5%81%B6%E5%83%8F&area=%E5%A4%A7%E9%99%86&lang=%E5%9B%BD%E8%AF%AD&year=2024&page=1
-		url = f"https://api.yingshi.tv/vod/v1/vod/list"
+	def categoryContent(self, tid, pg, filter, extend):
+		url = f"{self.apiurl}/vod/v1/vod/list"
 		result = {}	
 		params = {
 			"order":"desc",
@@ -95,52 +93,53 @@ class Spider(Spider):
 		result['limit'] = 30
 		result['total'] = data['Total']
 		return result
-
 	
-	#搜索頁
-	#https://api.yingshi.tv/vod/v1/search?wd=123&limit=20&page=1
+	#搜索頁	
 	def searchContent(self, key, quick="", pg="1"):
-		url = f"https://api.yingshi.tv/vod/v1/search?wd={key}&limit=20&page=1"
+		url = f"{self.apiurl}/vod/v1/search?wd={key}&limit=20&page=1"
 		result = {}
 		rsp =  self.fetch(url).json()
 		data = rsp.get("data","")		
 		result['list'] = data["List"]
 		return result
-
 	
 	#詳情頁
-	def detailContent(self, ids):
-		#https://api.yingshi.tv/vod/v1/info?id=207690		
+	def detailContent(self, ids):		
 		result = {}		
 		vod_id = ids[0]
-		url = f"https://api.yingshi.tv/vod/v1/info?id={vod_id}"
+		url = f"{self.apiurl}/vod/v1/info?id={vod_id}"
 		rsp =  self.fetch(url).json()
-		data = rsp.get("data","")
-		sources =  data.get("vod_sources","")
+		data = rsp.get("data", "")
+		sources = data.get("vod_sources", [])
+		playGroups = []
+		groupNames = []
+		for source in sources:
+			groupNames.append(source["source_name"])			
+			groupUrls = []
+			for v in source["vod_play_list"]['urls']:
+				episode_name = v['name']
+				groupUrls.append(episode_name + '$' + v['url'])
+			playGroups.append('#'.join(groupUrls))
 
-		playUrls = []
-		for source in  sources:
-			if "国内" in source["source_name"] :			
-				for v in source["vod_play_list"]['urls']:
-					playUrls.append('#'.join([v['name'] + '$' + v['url']]))
-				break
-			
-		result = {'list': [{
-			"vod_id": data.get("vod_id",""),
-			"vod_name": data.get("vod_name",""),
-			"vod_pic": data.get("vod_pic",""),
-			"vod_remarks": data.get("vod_remarks",""),
-			"type_name": data.get("vod_class",""),
-			"vod_year": data.get("vod_year",""),
-			"vod_area": data.get("vod_area",""),
-			"vod_actor": data.get("vod_actor",""),
-			"vod_director": data.get("vod_director",""),
-			"vod_content": data.get("vod_content",""),
-			"vod_play_from": "✡️",			
-			"vod_play_url": '#'.join(playUrls)
-		}]}
+		vod_play_url = '$$$'.join(playGroups)
+		vod_play_from = '$$$'.join(groupNames) 
+		result = {
+			'list': [{
+				"vod_id": data.get("vod_id", ""),
+				"vod_name": data.get("vod_name", ""),
+				"vod_pic": data.get("vod_pic", ""),
+				"vod_remarks": data.get("vod_remarks", ""),
+				"type_name": data.get("vod_class", ""),
+				"vod_year": data.get("vod_year", ""),
+				"vod_area": data.get("vod_area", ""),
+				"vod_actor": data.get("vod_actor", ""),
+				"vod_director": data.get("vod_director", ""),
+				"vod_content": data.get("vod_content", ""),
+				"vod_play_from": vod_play_from, 
+				"vod_play_url": vod_play_url
+			}]
+		}
 		return result
-
 	
 	#播放頁
 	def playerContent(self, flag, id, vipFlags):
@@ -151,22 +150,18 @@ class Spider(Spider):
             'header': ''
         }
 		return result
-
 	
 	#釋放資源
 	def destroy(self):
 		pass
-
 	
 	#視頻格式
 	def isVideoFormat(self, url):
 		pass
-
 	
 	#視頻檢測
 	def manualVideoCheck(self):
 		pass
-
 
 	#本地代理
 	def localProxy(self, param):
