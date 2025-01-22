@@ -10,12 +10,8 @@ import json
 from datetime import datetime
 
 current_year = datetime.now().year
-
-# Generate years from current year to 12 years ago
 years = [{"n": str(year), "v": str(year)} for year in range(current_year, current_year - 13, -1)]
 years.insert(0, {"n": "全部", "v": ""})
-
-# Define categories
 categories = {
     "1": [
         {"n": "全部", "v": ""},
@@ -60,7 +56,7 @@ class Spider(Spider):
 	def getName(self):
 		return "慕白"
 	
-	def init(self,extend):
+	def init(self,extend):		
 		self.extend = extend
 		
 	def homeContent(self,filter):		
@@ -78,18 +74,21 @@ class Spider(Spider):
 	def homeVideoContent(self):		
 		result = {}
 		url = f'{self.siteUrl}/api/index'
-		rsp = self.fetch(url)	
-		vod = []
-		jsonData = rsp.json()
-		for content in jsonData['data']['content']:
-			for v in content['movies']:
-				vod.append({
-					"vod_id": v['id'],
-					"vod_name": v['name'],
-					"vod_pic": v['picture'],
-					"vod_remarks": v['remarks']
-				})
-		result['list'] = vod
+		try:
+			rsp = self.fetch(url)	
+			vod = []
+			jsonData = rsp.json()
+			for content in jsonData['data']['content']:
+				for v in content['movies']:
+					vod.append({
+						"vod_id": v['id'],
+						"vod_name": v['name'],
+						"vod_pic": v['picture'],
+						"vod_remarks": v['remarks']
+					})
+			result['list'] = vod
+		except Exception as ex:
+			print(ex)
 		return result
 	
 	def categoryContent(self,tid,pg,filter,extend):
@@ -107,22 +106,24 @@ class Spider(Spider):
 			"Area": extend.get("Area", "")
 		}
 		url = f'{self.siteUrl}/api/filmClassifySearch'
-		rsp = requests.get(url=url,params=params)
-
-		if rsp.text:
-			jsonData = rsp.json()
-			for v in jsonData['data']['list']:
-				vod.append({
-					"vod_id": v['id'],
-					"vod_name": v['name'],
-					"vod_pic": v['picture'],
-					"vod_remarks": v['remarks']
-            	})
-			result['list'] = vod
-			result['page'] = pg
-			result['pagecount'] = jsonData['data']['page']['pageCount']
-			result['limit'] = 35
-			result['total'] = jsonData['data']['page']['total']
+		try:
+			rsp = requests.get(url=url,params=params)
+			if rsp.text:
+				jsonData = rsp.json()
+				for v in jsonData['data']['list']:
+					vod.append({
+						"vod_id": v['id'],
+						"vod_name": v['name'],
+						"vod_pic": v['picture'],
+						"vod_remarks": v['remarks']
+					})
+				result['list'] = vod
+				result['page'] = pg
+				result['pagecount'] = jsonData['data']['page']['pageCount']
+				result['limit'] = 35
+				result['total'] = jsonData['data']['page']['total']
+		except Exception as ex:
+			print(ex)
 		return result 
 	
 	def detailContent(self, ids):
@@ -130,48 +131,68 @@ class Spider(Spider):
 		result = {}		
 		id = ids[0]
 		url = f"{self.siteUrl}/api/filmDetail?id={id}"
-		rsp = self.fetch(url)
-		if rsp.text:
-			playUrls = []			
-			vod = []
-			jsonData = rsp.json()
-			jsonData = jsonData['data']['detail']			
-			for v in jsonData['playList'][0]:				
-				playUrls.append('#'.join([v['episode'] + '$' + v['link']]))
-			cleaned_content = re.sub(r'<p>\s*|\s*</p>', '', jsonData['descriptor']['content'])			
-			vod.append ({
-				"vod_id": id,
-				"vod_name": jsonData['name'],
-				"vod_pic":  jsonData['picture'],
-				"type_name": jsonData['descriptor']['classTag'],
-				"vod_remarks": jsonData['descriptor']['remarks'],
-				"vod_year": jsonData['descriptor']['year'],
-				"vod_area": jsonData['descriptor']['area'],
-				"vod_actor": jsonData['descriptor']['actor'],
-				"vod_director": jsonData['descriptor']['director'],
-				"vod_content": cleaned_content,
-				"vod_play_from" : '✡️',
-				"vod_play_url" : '#'.join(playUrls)
-				})			
-			result['list'] = vod
+		try:
+			rsp = self.fetch(url)
+			if rsp.text:
+				playGroups = []
+				playUrls = []
+				vod = []
+				jdata = rsp.json()
+				detail = jdata['data']['detail']
+				descriptor = detail["descriptor"]
+				for source in detail["list"]:
+					playGroups.append(source["name"])
+					groupUrls = []
+					for v in source["linkList"]:
+						episode_name = v["episode"]
+						link = v["link"]
+						groupUrls.append(f"{episode_name}${link}")
+					playUrls.append('#'.join(groupUrls))					
+
+				vod_play_from = '$$$'.join(playGroups)
+				vod_play_url = '$$$'.join(playUrls)
+
+				cleaned_content = re.sub(r'<p>\s*|\s*</p>', '', descriptor['content'])			
+				vod.append ({
+					"vod_id": id,
+					"vod_name": detail['name'],
+					"vod_pic":  detail['picture'],
+					"type_name": descriptor['classTag'],
+					"vod_remarks": descriptor['remarks'],
+					"vod_year": descriptor['year'],
+					"vod_area": descriptor['area'],
+					"vod_actor": descriptor['actor'],
+					"vod_director": descriptor['director'],
+					"vod_content": cleaned_content,
+					"vod_play_from" : vod_play_from,
+					"vod_play_url" : vod_play_url
+					})			
+				result['list'] = vod				
+				
+		except Exception as ex:
+			print(ex)
 		return result	
 	 
 	def searchContent(self, key, quick, pg="1"):	
 		#https://m.mubai.link/search?search=我知道我爱你
 		result = {}
 		url = f'{self.siteUrl}/api/searchFilm?keyword={key}'
-		rsp = self.fetch(url)		
-		vod = []
-		jsonData = rsp.json()
-		jsonData = jsonData['data']['list']
-		for v in jsonData:
-			vod.append({
-				"vod_id": v['id'],
-				"vod_name": v['name'],
-				"vod_pic": v['picture'],
-				"vod_remarks": v['remarks']
-			})      
-		result['list'] = vod
+		try:
+			rsp = self.fetch(url)
+			if rsp.text:
+				vod = []
+				jsonData = rsp.json()								
+				vodList = jsonData['data']['list']
+				for v in vodList:
+					vod.append({
+						"vod_id": v['id'],
+						"vod_name": v['name'],
+						"vod_pic": v['picture'],
+						"vod_remarks": v['remarks']
+					})      
+				result['list'] = vod
+		except Exception as ex:
+			print(ex)
 		return result
 
 	def playerContent(self,flag,id,vipFlags):
