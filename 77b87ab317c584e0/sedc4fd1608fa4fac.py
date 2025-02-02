@@ -21,7 +21,7 @@ class Spider(Spider):
         return {'class': classes}
 
     def homeVideoContent(self):
-        limit = 10
+        limit = 20
         urls = [
             self.douban_url('movie', limit, 0),
             self.douban_url('tv', limit, 0)
@@ -36,7 +36,7 @@ class Spider(Spider):
         return {'list': combined_results}
 
     def categoryContent(self, tid, pg, filter, extend):
-        limit = 20
+        limit = 40
         start = (int(pg) - 1) * limit
         total = 1000
         pagecount = total // limit
